@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+_site/404.html
+_site/feed.xml
+_site/index.html
+_site/about/index.html
+_site/lrc-ai-assistant/index.html
+_site/lrc-immich-plugin/index.html
