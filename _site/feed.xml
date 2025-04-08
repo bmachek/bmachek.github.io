@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-08T09:35:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Bastian’s Lightroom Toolbox</title><subtitle>Smart Tools for Lightroom. Bring the power of AI to Lightroom Classic. Share your Lightroom photos on your Immich instance. All Handcrafted with love by Bastian Machek</subtitle><entry><title type="html">Welcome to my blog.</title><link href="http://localhost:4000/blog/2025/04/08/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog." /><published>2025-04-08T09:00:00+02:00</published><updated>2025-04-08T09:00:00+02:00</updated><id>http://localhost:4000/blog/2025/04/08/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/08/welcome-to-my-blog.html"><![CDATA[<p>Hi *,</p>
+
+<p>I want to keep you informed about the current state of my plugins:</p>
+<ul>
+  <li>lrc-ai-assistant</li>
+  <li>lrc-immich-plugin</li>
+</ul>
+
+<p>Stay tuned for news, howtos and tipps.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Hi *,]]></summary></entry></feed>
