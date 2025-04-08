@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to my blog."
 date:   2025-04-08 09:00:00 +0200
 categories: blog
+tags: news lrc-immich-plugin lrc-ai-assistant
 ---
 Hi *,
 

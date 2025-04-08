@@ -1,7 +1,9 @@
 ---
-layout: page
-title: Lightroom Immich Plugin
+icon: fas fa-share
+title: LR Immich Plugin
 permalink: /lrc-immich-plugin/
+order: 4
+tags: lrc-immich-plugin
 ---
 
 A Lightroom Classic plugin which uploads images to an Immich Server via the API.
@@ -47,12 +49,6 @@ Either there should be a plugin called "Immich" in the list, one you're finished
 
 After you successfully installed the plugin, enter the server url and [API key](https://immich.app/docs/features/command-line-interface#obtain-the-api-key) in your export preset or in your Immich publish service.
 
-
-### Support my work
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=2LL4K9LN5CFA6)
-
-[![Bitcoin donate](https://bitcoli.com/img/logo-20.png)](https://bitcoli.com/donate/boandlk)
 
 ### Credits
 
