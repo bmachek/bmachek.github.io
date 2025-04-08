@@ -54,6 +54,6 @@ After you successfully installed the plugin, enter the server url and [API key](
 
 All contributors.
 
-[Jeffrey Friedl for JSON.lua](http://regex.info/blog/lua/json)
+[Jeffrey Friedl for JSON.lua](https://regex.info/blog/lua/json)
 
 [Enrique García Cota for inspect.lua](https://github.com/kikito/inspect.lua)

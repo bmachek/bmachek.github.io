@@ -56,5 +56,5 @@ Also the use of ChatGPT and/or Gemini on will generate costs.
 
 ## Credits
 * @gesteves for [his plugin](https://github.com/gesteves/lightroom-alt-text-plugin), which gave me the idea for this one, and on which the source code is based on.
-* @kikito for [inspect.lua](http://github.com/kikito/inspect.lua)
-* Jeffrey Friedl for [JSON.lua](http://regex.info/blog/lua/json)
+* @kikito for [inspect.lua](https://github.com/kikito/inspect.lua)
+* Jeffrey Friedl for [JSON.lua](https://regex.info/blog/lua/json)
