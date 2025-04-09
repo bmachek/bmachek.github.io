@@ -3,7 +3,6 @@ icon: fas fa-share
 title: LR Immich Plugin
 permalink: /lrc-immich-plugin/
 order: 4
-tags: lrc-immich-plugin
 ---
 
 A Lightroom Classic plugin which uploads images to an Immich Server.

@@ -3,7 +3,6 @@ icon: fas fa-robot
 title: LR AI Assistant
 permalink: /lrc-ai-assistant/
 order: 3
-tags: lrc-ai-assistant
 ---
 
 A Lightroom Classic plugin to fill **keywords**, **image title**, **caption** and **Alt Text** by using **ChatGPT**, **Gemini** or local **Ollama**. 
