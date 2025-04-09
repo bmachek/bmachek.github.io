@@ -6,26 +6,9 @@ order: 4
 tags: lrc-immich-plugin
 ---
 
-A Lightroom Classic plugin which uploads images to an Immich Server via the API.
-Both exporting and publish functionality is supported.
+A Lightroom Classic plugin which uploads images to an Immich Server.
 
-
-
-### Installation
-
-Download the current release zip file and extract it to the Lightroom plugin folder, which is:
-
-Mac
-    `/Users/$USER/Library/Application Support/Adobe/Lightroom/Modules/`
-
-Windows
-    `C:\Users\%USERNAME%\AppData\Roaming\Adobe\Lightroom\Modules`
-
-Alternatively extract it somewhere good an go to Lightroom Module Manager and add it via the GUI.
-
-Either there should be a plugin called "Immich" in the list, one you're finished.
-
-### Features
+#### Features
 
 * Setup connection to your Immich instance via URL and API key in the export dialog, or when creating the publish service.
 
@@ -41,19 +24,30 @@ Either there should be a plugin called "Immich" in the list, one you're finished
 
 
 * Upcoming features:
-    * ~~Set Immich album title image from Lightroom in Published collection.~~
     * (Maybe) Additional album options like sharing in the Published Collection settings dialog.
     * (Maybe) [Your feature](https://github.com/bmachek/lrc-immich-plugin/discussions/16)
 
-### Usage
+#### Download the plugin
+[Download](https://github.com/bmachek/lrc-immich-plugin/releases/latest/)
 
-After you successfully installed the plugin, enter the server url and [API key](https://immich.app/docs/features/command-line-interface#obtain-the-api-key) in your export preset or in your Immich publish service.
+#### Installation
 
+[Installation guide](/install-plugin)
 
-### Credits
+#### Usage
 
-All contributors.
+After you successfully installed the plugin, enter the server url and [API key](https://immich.app/docs/features/command-line-interface#obtain-the-api-key) in your export preset and/or in your Immich publish service.
+You're good to go.
 
-[Jeffrey Friedl for JSON.lua](https://regex.info/blog/lua/json)
+#### Troubleshooting
 
-[Enrique García Cota for inspect.lua](https://github.com/kikito/inspect.lua)
+If you run into troubles, best thing to do is check the log file.
+Easiest way to find the log file, is by opening the Lightroom module manager, navigate to the Immich plugin, and enable debug logging.
+There's also a button *Show log file*. 
+If nothing helps, [open an issue](https://github.com/bmachek/lrc-immich-plugin/issues/new/choose) over at GitHub.
+
+#### Credits
+
+* All contributors
+* Enrique García Cota for [inspect.lua](https://github.com/kikito/inspect.lua)
+* Jeffrey Friedl for [JSON.lua](https://regex.info/blog/lua/json)
