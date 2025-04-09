@@ -1,6 +1,6 @@
 ---
 layout: post
-title:   New Ollama model added mistral-small3.1
+title:   "New Ollama model added mistral-small3.1"
 date:   2025-04-09 20:15:00 +0200
 tags: lrc-ai-assistant
 ---
