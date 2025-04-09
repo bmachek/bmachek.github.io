@@ -26,14 +26,14 @@ Depending on your hardware and internet connection either Ollama or Gemini/ChatG
 [Download](https://github.com/bmachek/lrc-ai-assistant/releases/latest/)
 
 #### Installation
-[Installation guide](/install-plugin)
+[Installation guide]({% link _articles/install-plugin.md %})
 
 #### Usage
 * Install plugin using Lightroom addon module manager.
 * Obtain an API key for the model you want to use or install Ollama:
   * [Obtain Google Gemini API key](https://aistudio.google.com/app/apikey)
   * [Obtain ChatGPT API key](https://platform.openai.com/api-keys)
-  * [Download and setup Ollama on your local machine](/lrc-ai-assistant/ollama-setup)
+  * [Download and setup Ollama on your local machine]({% link _articles/ollama-setup.md %})
 * Configure API key in Lightroom module manager. (Not needed for Ollama.)
 * Choose the model you want to use on the Lightroom module manager.
 * Go to Library in Lightroom

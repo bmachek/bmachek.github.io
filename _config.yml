@@ -156,6 +156,8 @@ collections:
   tabs:
     output: true
     sort_by: order
+  articles:
+    output: true
 
 defaults:
   - scope:

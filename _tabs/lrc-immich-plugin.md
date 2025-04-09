@@ -31,7 +31,7 @@ A Lightroom Classic plugin which uploads images to an Immich Server.
 
 #### Installation
 
-[Installation guide](/install-plugin)
+[Installation guide]({% link _articles/install-plugin.md %})
 
 #### Usage
 

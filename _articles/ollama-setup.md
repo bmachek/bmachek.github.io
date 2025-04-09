@@ -1,7 +1,5 @@
 ---
 layout: page
-title: Ollama setup
-permalink: /lrc-ai-assistant/ollama-setup
 tags: lrc-ai-assistant ollama setup
 ---
 

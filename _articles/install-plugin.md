@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Howto install a Lightroom classic plugin
-permalink: /install-plugin
 tags: lrc-ai-assistant lrc-immich-plugin setup
 ---
 #### Prerequesites
