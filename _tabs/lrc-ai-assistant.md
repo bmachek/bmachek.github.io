@@ -10,11 +10,11 @@ A Lightroom Classic plugin to fill **keywords**, **image title**, **caption** an
 #### Currently Available models
 
 | **ChatGPT** | **Gemini** | **Ollama** |
-| gpt-4o-mini | 1.5pro | gemma3 |
-| gpt-4o| 2.0-flash | llama3.2-vision |
-|  | 2.0-flash-lite | mistral-small3.1 |
-|  | 2.5pro | deepseek-r1 |
-|  |  | llava |
+| gpt-4.1-nano | 1.5pro | gemma3 |
+| gpt-4.1-mini | 2.0-flash | llama3.2-vision |
+| gpt-4.1 | 2.0-flash-lite | mistral-small3.1 |
+| gpt-4o-mini | 2.5pro | deepseek-r1 |
+| gpt-4o |  | llava |
 
 #### Privacy
 If your concerned about the privacy of your images, using Ollama might be a good idea. 
