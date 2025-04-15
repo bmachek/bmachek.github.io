@@ -9,6 +9,8 @@ A Lightroom Classic plugin to fill **keywords**, **image title**, **caption** an
 
 #### Currently Available models
 
+**There is a [poll](https://github.com/bmachek/lrc-ai-assistant/discussions/28) at GitHub, on which AI models you prefer most. Please share your likings! :-)**
+
 | **ChatGPT** | **Gemini** | **Ollama** |
 | gpt-4.1-nano | 1.5pro | gemma3 |
 | gpt-4.1-mini | 2.0-flash | llama3.2-vision |
