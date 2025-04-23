@@ -21,6 +21,8 @@ A Lightroom Classic plugin which uploads images to an Immich Server.
     * Replace existing images.
     * Duplicate detection via Lightroom catalog ID, and based on date and filename.
 
+* Import images:
+    * Import images album wise from Immich into the Lightroom Classic catalog.
 
 * Upcoming features:
     * (Maybe) Additional album options like sharing in the Published Collection settings dialog.
