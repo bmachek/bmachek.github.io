@@ -11,11 +11,14 @@ A Lightroom Classic plugin to fill **keywords**, **image title**, **caption** an
 
 **There is a [poll](https://github.com/bmachek/lrc-ai-assistant/discussions/28) at GitHub, on which AI models you prefer most. Please share your likings! :-)**
 
+With the release of version 3.6.0 of the plugin, there has been a change in selection of Ollama models.
+From now on, the plugin queries the Ollama API for locally installed models, which have the capability **"vision"**.
+
 | **ChatGPT** | **Gemini** | **Ollama** |
 | gpt-4.1-nano | 1.5pro | gemma3 |
 | gpt-4.1-mini | 2.0-flash | llama3.2-vision |
 | gpt-4.1 | 2.0-flash-lite | mistral-small3.1 |
-| gpt-4o-mini | 2.5pro | deepseek-r1 |
+| gpt-4o-mini | 2.5pro | moondream |
 | gpt-4o |  | llava |
 
 #### Privacy
