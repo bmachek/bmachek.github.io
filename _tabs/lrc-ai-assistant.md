@@ -15,11 +15,11 @@ With the release of version 3.6.0 of the plugin, there has been a change in sele
 From now on, the plugin queries the Ollama API for locally installed models, which have the capability **"vision"**.
 
 | **ChatGPT** | **Gemini** | **Ollama** |
-| gpt-4.1-nano | 1.5pro | gemma3 |
-| gpt-4.1-mini | 2.0-flash | llama3.2-vision |
-| gpt-4.1 | 2.0-flash-lite | mistral-small3.1 |
-| gpt-4o-mini | 2.5pro | moondream |
-| gpt-4o |  | llava |
+| gpt-4.1-nano | 1.5pro | Any local vision model |
+| gpt-4.1-mini | 2.0-flash | |
+| gpt-4.1 | 2.0-flash-lite |  |
+| gpt-4o-mini | 2.5pro | |
+| gpt-4o |  | |
 
 #### Privacy
 If your concerned about the privacy of your images, using Ollama might be a good idea. 
