@@ -1,6 +1,6 @@
 ---
 icon: fas fa-robot
-title: LrGeniusTagAI
+title: LR AI Assistant
 permalink: /lrc-ai-assistant/
 order: 3
 ---
