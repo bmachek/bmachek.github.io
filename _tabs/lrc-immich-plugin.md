@@ -38,6 +38,24 @@ A Lightroom Classic plugin which uploads images to an Immich Server.
 #### Usage
 
 After you successfully installed the plugin, enter the server url and [API key](https://immich.app/docs/features/command-line-interface#obtain-the-api-key) in your export preset and/or in your Immich publish service.
+
+**The following API key permissions are necessary:**
+* activity.read
+* asset.read
+* asset.upload
+* asset.replace
+* asset.delete
+* asset.download
+* asset.update
+* albumAsset.create
+* albumAsset.delete
+* album.read
+* album.create
+* album.delete
+* album.update
+* user.read
+* stack.create
+
 You're good to go.
 
 #### Troubleshooting
