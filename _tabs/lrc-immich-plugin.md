@@ -47,6 +47,7 @@ After you successfully installed the plugin, enter the server url and [API key](
 * asset.delete
 * asset.download
 * asset.update
+* asset.copy
 * albumAsset.create
 * albumAsset.delete
 * album.read
