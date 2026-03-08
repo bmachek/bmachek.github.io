@@ -270,11 +270,93 @@ html {
 }
 
 .card,
+.card-wrapper,
 .list-group-item,
 #post-list .post-preview {
   background: var(--bm-bg-elevated) !important;
   border-color: var(--bm-border) !important;
   color: var(--bm-text) !important;
+}
+
+/* Blog list: force same readable colors (override theme) */
+#main-wrapper #post-list .card-wrapper,
+#main-wrapper #post-list .card,
+#main-wrapper #post-list a.post-preview,
+main #post-list .card-wrapper,
+main #post-list .card,
+main #post-list a.post-preview {
+  background: var(--bm-bg-elevated) !important;
+  border-color: var(--bm-border) !important;
+  color: var(--bm-text) !important;
+}
+
+#main-wrapper #post-list .card-title,
+#main-wrapper #post-list .card-body h1,
+#main-wrapper #post-list h1.card-title,
+main #post-list .card-title,
+main .card-title {
+  color: var(--bm-text) !important;
+  font-family: var(--bm-font-mono) !important;
+}
+
+#main-wrapper #post-list .card-text,
+#main-wrapper #post-list .card-body,
+#main-wrapper #post-list .content,
+#main-wrapper #post-list .card-text p,
+main #post-list .card-text,
+main #post-list .card-body,
+main #post-list .content,
+main .card-text,
+main .card-text p {
+  color: var(--bm-text) !important;
+}
+
+#main-wrapper #post-list .post-meta,
+#main-wrapper #post-list .post-meta i,
+#main-wrapper #post-list .post-meta time,
+main #post-list .post-meta,
+main .post-meta,
+main .post-meta i,
+main .post-meta time {
+  color: var(--bm-text-dim) !important;
+}
+
+#main-wrapper #post-list a.post-preview,
+main #post-list a.post-preview {
+  color: var(--bm-text) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+#main-wrapper #post-list a.post-preview:hover,
+main #post-list a.post-preview:hover {
+  color: var(--bm-text) !important;
+}
+
+#main-wrapper #post-list a.post-preview:hover .card-title,
+main a.post-preview:hover .card-title {
+  color: var(--bm-accent) !important;
+}
+
+/* Force all post list content to readable colors (nuclear) */
+#post-list .card-wrapper *,
+#post-list .post-preview * {
+  color: inherit;
+}
+#post-list .card-wrapper,
+#post-list .post-preview {
+  color: var(--bm-text) !important;
+}
+#post-list .card-title {
+  color: var(--bm-text) !important;
+}
+#post-list .card-text,
+#post-list .card-text p,
+#post-list .content p {
+  color: var(--bm-text) !important;
+}
+#post-list .post-meta {
+  color: var(--bm-text-dim) !important;
 }
 
 #sidebar .sidebar-bottom {
