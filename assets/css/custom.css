@@ -1,178 +1,265 @@
 /* ============================================
-   Bastian Machek – Custom design overrides
+   Terminal / code-style dark theme
    ============================================ */
 
 :root {
-  --bm-accent: #e07c3c;
-  --bm-accent-soft: rgba(224, 124, 60, 0.15);
-  --bm-accent-hover: #c96a2e;
-  --bm-content-bg: rgba(255, 255, 255, 0.6);
-  --bm-card-border: rgba(0, 0, 0, 0.06);
-  --bm-radius: 12px;
-  --bm-radius-sm: 8px;
-  --bm-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  --bm-font-sans: "DM Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  --bm-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --bm-bg: #0d1117;
+  --bm-bg-elevated: #161b22;
+  --bm-border: #30363d;
+  --bm-text: #e6edf3;
+  --bm-text-dim: #8b949e;
+  --bm-accent: #7ee787;
+  --bm-accent-cyan: #79c0ff;
+  --bm-accent-amber: #d29922;
+  --bm-accent-soft: rgba(126, 231, 135, 0.12);
+  --bm-font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", monospace;
+  --bm-radius: 6px;
+  --bm-radius-sm: 4px;
 }
 
-[data-mode="dark"],
-html:not([data-mode]) .dark,
-html.auto-dark [data-mode="dark"] {
-  --bm-content-bg: rgba(28, 28, 31, 0.6);
-  --bm-card-border: rgba(255, 255, 255, 0.08);
-  --bm-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-}
-
-/* Typography */
+/* Force dark, terminal-like base */
+html,
+body,
+#sidebar,
 #main-wrapper,
-.profile-wrapper,
-#sidebar .nav,
-#topbar-wrapper {
-  font-family: var(--bm-font-sans) !important;
+#topbar-wrapper,
+.profile-wrapper {
+  background-color: var(--bm-bg) !important;
+  color: var(--bm-text) !important;
+}
+
+/* Monospace everywhere */
+body,
+#main-wrapper,
+#sidebar,
+#topbar-wrapper,
+.profile-wrapper .site-title,
+.profile-wrapper .site-subtitle,
+#sidebar .nav-link,
+#topbar-title,
+#main-wrapper main,
+#main-wrapper h1,
+#main-wrapper h2,
+#main-wrapper h3,
+#main-wrapper h4 {
+  font-family: var(--bm-font-mono) !important;
 }
 
 #main-wrapper main {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
 }
 
 #main-wrapper h1,
 #main-wrapper h2,
 #main-wrapper h3,
-#main-wrapper h4,
-#topbar-title {
-  font-family: var(--bm-font-sans) !important;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+#main-wrapper h4 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--bm-text) !important;
 }
 
-#main-wrapper code,
-#main-wrapper pre,
-.highlight {
-  font-family: var(--bm-font-mono) !important;
-  font-size: 0.9em;
+/* Main content = terminal window */
+#main-wrapper main {
+  background: var(--bm-bg-elevated) !important;
+  border: 1px solid var(--bm-border) !important;
+  border-radius: var(--bm-radius) !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) !important;
+  padding: 1.75rem 2rem !important;
+  margin-bottom: 2rem;
 }
 
-/* Sidebar – warmer, clearer */
-#sidebar .profile-wrapper {
-  padding-bottom: 0.75rem;
+/* Prompt-style headings (optional terminal feel) */
+#main-wrapper main h2 {
+  color: var(--bm-accent) !important;
+  margin-top: 1.5em;
+}
+#main-wrapper main h2:first-child {
+  margin-top: 0;
+}
+
+/* Links = terminal green / cyan */
+#main-wrapper main a:not(.btn) {
+  color: var(--bm-accent) !important;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--bm-border);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+#main-wrapper main a:not(.btn):hover {
+  color: var(--bm-accent-cyan) !important;
+  border-bottom-color: var(--bm-accent-cyan);
+}
+
+/* Sidebar = dark panel */
+#sidebar {
+  border-right: 1px solid var(--bm-border) !important;
 }
 
 #sidebar .site-title {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--bm-text) !important;
 }
 
 #sidebar .site-subtitle {
-  font-size: 0.9rem;
-  opacity: 0.85;
+  font-size: 0.85rem;
+  color: var(--bm-text-dim) !important;
 }
 
 #sidebar .nav-link {
   border-radius: var(--bm-radius-sm);
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.15s ease, color 0.15s ease;
+  color: var(--bm-text-dim) !important;
 }
 
-#sidebar .nav-link:hover,
+#sidebar .nav-link:hover {
+  background: rgba(126, 231, 135, 0.1) !important;
+  color: var(--bm-accent) !important;
+}
+
 #sidebar .nav-link.active {
   background: var(--bm-accent-soft) !important;
   color: var(--bm-accent) !important;
 }
 
 #sidebar #avatar.rounded-circle {
-  border: 3px solid var(--bm-accent-soft);
-  box-shadow: var(--bm-shadow);
+  border: 2px solid var(--bm-border);
+  box-shadow: none;
 }
 
-/* Main content – card-style area */
-#main-wrapper main {
-  background: var(--bm-content-bg);
-  border-radius: var(--bm-radius);
-  border: 1px solid var(--bm-card-border);
-  box-shadow: var(--bm-shadow);
-  padding: 2rem 2.25rem !important;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(8px);
+/* Topbar */
+#topbar-wrapper {
+  border-bottom: 1px solid var(--bm-border) !important;
+  background: var(--bm-bg) !important;
 }
 
-@media (max-width: 991.98px) {
-  #main-wrapper main {
-    padding: 1.5rem 1.25rem !important;
-  }
+#topbar-title {
+  font-size: 0.95rem;
+  color: var(--bm-text) !important;
 }
 
-/* Links */
-#main-wrapper main a:not(.btn) {
-  color: var(--bm-accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+/* Code blocks = terminal output style */
+#main-wrapper main code,
+#main-wrapper main pre,
+.highlight,
+#main-wrapper main .highlight {
+  font-family: var(--bm-font-mono) !important;
+  font-size: 0.875em;
+  background: rgba(0, 0, 0, 0.35) !important;
+  color: var(--bm-text) !important;
+  border: 1px solid var(--bm-border) !important;
+  border-radius: var(--bm-radius-sm) !important;
 }
 
-#main-wrapper main a:not(.btn):hover {
-  color: var(--bm-accent-hover);
-  border-bottom-color: var(--bm-accent);
+#main-wrapper main pre {
+  padding: 1rem 1.25rem !important;
+  overflow-x: auto;
 }
 
-/* Lists and spacing */
+/* Blockquotes = side comment / terminal note */
+#main-wrapper main blockquote {
+  border-left: 3px solid var(--bm-accent-amber);
+  background: rgba(210, 153, 34, 0.08) !important;
+  color: var(--bm-text-dim) !important;
+  border-radius: 0 var(--bm-radius-sm) var(--bm-radius-sm) 0;
+  padding: 0.75rem 1rem;
+  margin: 1.25em 0;
+  font-style: normal;
+}
+
+/* Lists */
 #main-wrapper main ul,
 #main-wrapper main ol {
   margin-bottom: 1.25em;
 }
 
-#main-wrapper main li + li {
-  margin-top: 0.35em;
+#main-wrapper main li {
+  margin-top: 0.25em;
 }
 
-/* Blockquotes */
-#main-wrapper main blockquote {
-  border-left: 4px solid var(--bm-accent);
-  background: var(--bm-accent-soft);
-  border-radius: 0 var(--bm-radius-sm) var(--bm-radius-sm) 0;
-  padding: 1rem 1.25rem;
-  margin: 1.5em 0;
-  font-style: italic;
+#main-wrapper main li::marker {
+  color: var(--bm-text-dim);
 }
 
-/* Topbar */
-#topbar-wrapper {
-  border-bottom: 1px solid var(--bm-card-border);
-}
-
-#topbar-title {
-  font-size: 1.1rem;
-}
-
-/* Buttons (e.g. in support-me, install) */
+/* Buttons */
 #main-wrapper .btn-primary,
 #main-wrapper a.btn {
   background: var(--bm-accent) !important;
   border-color: var(--bm-accent) !important;
-  font-weight: 600;
+  color: var(--bm-bg) !important;
+  font-family: var(--bm-font-mono) !important;
+  font-weight: 500;
   border-radius: var(--bm-radius-sm);
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: filter 0.15s ease;
 }
 
 #main-wrapper .btn-primary:hover,
 #main-wrapper a.btn:hover {
-  background: var(--bm-accent-hover) !important;
-  border-color: var(--bm-accent-hover) !important;
-  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
-/* Mode toggle and footer accents */
+/* Mode toggle & sidebar bottom */
+#mode-toggle,
+.sidebar-bottom .nav-link {
+  color: var(--bm-text-dim) !important;
+}
+
 #mode-toggle:hover,
 .sidebar-bottom .nav-link:hover {
   color: var(--bm-accent) !important;
 }
 
-/* Smooth scroll and focus */
+/* Search, breadcrumb, etc. */
+#search-input,
+.form-control {
+  background: var(--bm-bg-elevated) !important;
+  border-color: var(--bm-border) !important;
+  color: var(--bm-text) !important;
+  font-family: var(--bm-font-mono) !important;
+}
+
+/* Focus ring */
+#main-wrapper main :focus-visible {
+  outline: 2px solid var(--bm-accent);
+  outline-offset: 2px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-#main-wrapper main :focus-visible {
-  outline: 2px solid var(--bm-accent);
-  outline-offset: 2px;
+/* Catch remaining theme surfaces */
+#core-wrapper,
+#main-wrapper .container {
+  background-color: var(--bm-bg) !important;
+}
+
+.card,
+.list-group-item,
+#post-list .post-preview {
+  background: var(--bm-bg-elevated) !important;
+  border-color: var(--bm-border) !important;
+  color: var(--bm-text) !important;
+}
+
+#sidebar .sidebar-bottom {
+  border-top: 1px solid var(--bm-border) !important;
+}
+
+/* Footer – dark like the rest */
+#tail-wrapper,
+footer[aria-label="Site Info"],
+footer {
+  background-color: var(--bm-bg) !important;
+  color: var(--bm-text-dim) !important;
+  border-top: 1px solid var(--bm-border) !important;
+}
+
+footer a {
+  color: var(--bm-accent) !important;
+}
+
+footer a:hover {
+  color: var(--bm-accent-cyan) !important;
 }
