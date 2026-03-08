@@ -57,6 +57,6 @@ If that doesn’t help, [open an issue](https://github.com/bmachek/lrc-immich-pl
 #### Credits
 
 * All contributors  
-* [Jeffrey Friedl](http://regex.info/blog/lua/json) — JSON.lua  
+* [Jeffrey Friedl](https://regex.info/blog/lua/json) — JSON.lua  
 * [Enrique García Cota](https://github.com/kikito/inspect.lua) — inspect.lua  
 * [Min Idzelis](https://github.com/midzelis/mi.Immich.Publisher) — ideas from his Immich Publisher plugin
