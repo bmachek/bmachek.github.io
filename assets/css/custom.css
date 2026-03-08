@@ -1,0 +1,178 @@
+/* ============================================
+   Bastian Machek – Custom design overrides
+   ============================================ */
+
+:root {
+  --bm-accent: #e07c3c;
+  --bm-accent-soft: rgba(224, 124, 60, 0.15);
+  --bm-accent-hover: #c96a2e;
+  --bm-content-bg: rgba(255, 255, 255, 0.6);
+  --bm-card-border: rgba(0, 0, 0, 0.06);
+  --bm-radius: 12px;
+  --bm-radius-sm: 8px;
+  --bm-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --bm-font-sans: "DM Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  --bm-font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+[data-mode="dark"],
+html:not([data-mode]) .dark,
+html.auto-dark [data-mode="dark"] {
+  --bm-content-bg: rgba(28, 28, 31, 0.6);
+  --bm-card-border: rgba(255, 255, 255, 0.08);
+  --bm-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography */
+#main-wrapper,
+.profile-wrapper,
+#sidebar .nav,
+#topbar-wrapper {
+  font-family: var(--bm-font-sans) !important;
+}
+
+#main-wrapper main {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+#main-wrapper h1,
+#main-wrapper h2,
+#main-wrapper h3,
+#main-wrapper h4,
+#topbar-title {
+  font-family: var(--bm-font-sans) !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#main-wrapper code,
+#main-wrapper pre,
+.highlight {
+  font-family: var(--bm-font-mono) !important;
+  font-size: 0.9em;
+}
+
+/* Sidebar – warmer, clearer */
+#sidebar .profile-wrapper {
+  padding-bottom: 0.75rem;
+}
+
+#sidebar .site-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#sidebar .site-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+#sidebar .nav-link {
+  border-radius: var(--bm-radius-sm);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+  background: var(--bm-accent-soft) !important;
+  color: var(--bm-accent) !important;
+}
+
+#sidebar #avatar.rounded-circle {
+  border: 3px solid var(--bm-accent-soft);
+  box-shadow: var(--bm-shadow);
+}
+
+/* Main content – card-style area */
+#main-wrapper main {
+  background: var(--bm-content-bg);
+  border-radius: var(--bm-radius);
+  border: 1px solid var(--bm-card-border);
+  box-shadow: var(--bm-shadow);
+  padding: 2rem 2.25rem !important;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 991.98px) {
+  #main-wrapper main {
+    padding: 1.5rem 1.25rem !important;
+  }
+}
+
+/* Links */
+#main-wrapper main a:not(.btn) {
+  color: var(--bm-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#main-wrapper main a:not(.btn):hover {
+  color: var(--bm-accent-hover);
+  border-bottom-color: var(--bm-accent);
+}
+
+/* Lists and spacing */
+#main-wrapper main ul,
+#main-wrapper main ol {
+  margin-bottom: 1.25em;
+}
+
+#main-wrapper main li + li {
+  margin-top: 0.35em;
+}
+
+/* Blockquotes */
+#main-wrapper main blockquote {
+  border-left: 4px solid var(--bm-accent);
+  background: var(--bm-accent-soft);
+  border-radius: 0 var(--bm-radius-sm) var(--bm-radius-sm) 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5em 0;
+  font-style: italic;
+}
+
+/* Topbar */
+#topbar-wrapper {
+  border-bottom: 1px solid var(--bm-card-border);
+}
+
+#topbar-title {
+  font-size: 1.1rem;
+}
+
+/* Buttons (e.g. in support-me, install) */
+#main-wrapper .btn-primary,
+#main-wrapper a.btn {
+  background: var(--bm-accent) !important;
+  border-color: var(--bm-accent) !important;
+  font-weight: 600;
+  border-radius: var(--bm-radius-sm);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+#main-wrapper .btn-primary:hover,
+#main-wrapper a.btn:hover {
+  background: var(--bm-accent-hover) !important;
+  border-color: var(--bm-accent-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Mode toggle and footer accents */
+#mode-toggle:hover,
+.sidebar-bottom .nav-link:hover {
+  color: var(--bm-accent) !important;
+}
+
+/* Smooth scroll and focus */
+html {
+  scroll-behavior: smooth;
+}
+
+#main-wrapper main :focus-visible {
+  outline: 2px solid var(--bm-accent);
+  outline-offset: 2px;
+}
