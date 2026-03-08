@@ -119,7 +119,12 @@ body,
 }
 
 #sidebar .nav-link.active {
-  background: var(--bm-accent-soft) !important;
+  background: var(--bm-bg-elevated) !important;
+  color: var(--bm-accent) !important;
+  border: 1px solid var(--bm-border);
+}
+#sidebar .nav-item.active .nav-link,
+#sidebar .nav-item.active .nav-link i {
   color: var(--bm-accent) !important;
 }
 
@@ -199,24 +204,53 @@ body,
   filter: brightness(1.1);
 }
 
-/* Mode toggle & sidebar bottom */
-#mode-toggle,
-.sidebar-bottom .nav-link {
-  color: var(--bm-text-dim) !important;
+/* Hide light/dark mode toggle */
+#mode-toggle {
+  display: none !important;
 }
 
-#mode-toggle:hover,
-.sidebar-bottom .nav-link:hover {
-  color: var(--bm-accent) !important;
+/* Hide email and GitHub links in sidebar */
+.sidebar-bottom a[aria-label="email"],
+.sidebar-bottom a[aria-label="github"] {
+  display: none !important;
 }
 
-/* Search, breadcrumb, etc. */
+/* Topbar: search and buttons – all dark */
+#topbar,
+#topbar .btn-link,
+#search,
+#search-trigger,
+#search-cancel,
+#breadcrumb,
+#breadcrumb a {
+  background-color: transparent !important;
+  color: var(--bm-text) !important;
+  border-color: var(--bm-border) !important;
+}
+
+#search {
+  background: var(--bm-bg-elevated) !important;
+  border: 1px solid var(--bm-border);
+  border-radius: var(--bm-radius-sm);
+}
+
 #search-input,
+#search .form-control,
 .form-control {
   background: var(--bm-bg-elevated) !important;
   border-color: var(--bm-border) !important;
   color: var(--bm-text) !important;
   font-family: var(--bm-font-mono) !important;
+}
+
+#search-input::placeholder {
+  color: var(--bm-text-dim) !important;
+}
+
+#search .fa-search,
+#search-trigger i,
+#search-cancel {
+  color: var(--bm-text-dim) !important;
 }
 
 /* Focus ring */
