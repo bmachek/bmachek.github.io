@@ -40,7 +40,7 @@ A Lightroom Classic plugin that **uploads and imports** images to and from an [I
 
 #### Installation
 
-[Installation guide]({% link _articles/install-plugin.md %})
+See the [installation instructions on GitHub](https://github.com/bmachek/lrc-immich-plugin#installation).
 
 #### Usage
 
