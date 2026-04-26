@@ -18,6 +18,9 @@ Doing stuff with **cameras and computers** — photography and free software.
 - **[LR Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }})** — Upload and import images between Lightroom Classic and [Immich](https://immich.app/). Export, publish, and sync albums.  
   → [GitHub](https://github.com/bmachek/lrc-immich-plugin)
 
+- **[CIDP Buddy]({{ '/cidp-buddy/' | relative_url }})** — Flutter app for CIDP patients to manage infusions, medication and supply inventory, schedules, and a vitals & symptom diary.  
+  → [GitHub](https://github.com/bmachek/CIDPbuddy)
+
 ---
 
 ### More
