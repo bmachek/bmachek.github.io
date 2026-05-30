@@ -1,6 +1,9 @@
 title: Bastian Machek
-tagline: Doing stuff with cameras and computers
-description: Doing stuff with cameras and computers
+tagline: Lightroom Classic plugins for Immich & AI — photography meets free software
+description: >-
+  Free Lightroom Classic plugins by Bastian Machek: upload, sync and back up your
+  photos to Immich, plus AI-powered tagging and search. Photography and open-source
+  software, hands-on.
 
 url: "https://blog.fokuspunk.de"
 
@@ -28,8 +31,8 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
+  google: LmZnBMo_vH_VQVoJurzGfgBERKogWJiz7rvahkDEMHI
+  bing: D181BCBB540FEED5DBA40405D71CB8E9
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
@@ -84,6 +87,10 @@ avatar: img/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
+# TODO(bm): drop a 1200x630 PNG/JPG at img/social-preview.png — a screenshot of the
+# plugin running in Lightroom works best — then uncomment the line below. This is what
+# renders as the link card when the site is shared on Reddit/Discord/social.
+# social_preview_image: img/social-preview.png
 social_preview_image: # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
@@ -199,7 +206,6 @@ exclude:
   - purgecss.js
   - rollup.config.js
   - "package*.json"
-  - _posts
 
 jekyll-archives:
   enabled: [categories, tags]

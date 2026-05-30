@@ -1,11 +1,56 @@
 ---
 icon: fas fa-share
-title: LR Immich Plugin
+title: Lightroom Immich Plugin
 permalink: /lrc-immich-plugin/
 order: 4
+description: >-
+  Free, open-source Lightroom Classic plugin to upload, sync, back up and import
+  photos between Lightroom and an Immich server. Export presets, publish services,
+  album sync, duplicate detection and stacking.
 ---
 
-A Lightroom Classic plugin that **uploads and imports** images to and from an [Immich](https://immich.app/) server via the Immich API. It supports **export** as well as **publish**.
+<!-- SoftwareApplication + FAQ structured data for rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Lightroom Immich Plugin (lrc-immich-plugin)",
+      "operatingSystem": "Windows, macOS",
+      "applicationCategory": "MultimediaApplication",
+      "description": "Free Lightroom Classic plugin to upload, sync, back up and import photos between Adobe Lightroom Classic and an Immich server via the Immich API.",
+      "url": "https://blog.fokuspunk.de/lrc-immich-plugin/",
+      "downloadUrl": "https://github.com/bmachek/lrc-immich-plugin/releases/latest/",
+      "softwareHelp": "https://github.com/bmachek/lrc-immich-plugin#installation",
+      "author": { "@type": "Person", "name": "Bastian Machek" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I upload Lightroom Classic photos to Immich?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Install the Lightroom Immich Plugin, enter your Immich server URL and API key in an export preset or publish service, then export or publish your photos. The plugin uploads the images to Immich and can add them to an album." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I sync Lightroom albums to Immich?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use a Publish Service: the plugin creates, renames and deletes Immich albums to match your published Lightroom collections, and uploads, updates or removes images as the collection changes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Lightroom Immich Plugin free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is free and open source. Download the latest release from GitHub." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+The **Lightroom Immich Plugin** (`lrc-immich-plugin`) is a free, open-source plugin that lets you **upload, sync, back up and import** photos between **Adobe Lightroom Classic** and an [Immich](https://immich.app/) server through the Immich API. Use it as an **export** preset or a **publish service** to keep your Lightroom catalog and your self-hosted Immich library in sync.
 
 **Source:** [github.com/bmachek/lrc-immich-plugin](https://github.com/bmachek/lrc-immich-plugin) · [Releases](https://github.com/bmachek/lrc-immich-plugin/releases) · [Issues](https://github.com/bmachek/lrc-immich-plugin/issues)
 
