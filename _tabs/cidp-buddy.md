@@ -5,7 +5,9 @@ permalink: /cidp-buddy/
 order: 5
 ---
 
-## CIDP Buddy
+![CIDP Buddy Feature Graphic](/assets/img/cidp-buddy/cidpbuddy_feature_graphic.png){: width="100%" style="border-radius: 12px; margin-bottom: 1.5rem;" }
+
+<img src="/assets/img/cidp-buddy/app_icon.png" alt="CIDP Buddy Logo" style="width: 72px; border-radius: 16px; float: left; margin: 0 1rem 0.5rem 0;" />
 
 **CIDP Buddy** is a medication and symptom management app for patients with **Chronic Inflammatory Demyelinating Polyneuropathy (CIDP)**. It helps manage complex infusion schedules, keep track of medication and supply inventory, and monitor health through a vitals and symptom diary.
 
@@ -36,6 +38,13 @@ order: 5
 #### Order Wizard
 - **Automated calculations** for what to order based on current stock and upcoming requirements.
 - **Delivery tracking** — manage pending orders and confirm deliveries to update inventory automatically.
+
+### Screenshots
+
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+  <img src="/assets/img/cidp-buddy/Screenshot_1.png" alt="CIDP Buddy Dashboard" style="width: 200px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);" />
+  <img src="/assets/img/cidp-buddy/Screenshot_2.png" alt="CIDP Buddy Settings" style="width: 200px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);" />
+</div>
 
 ### Tech Stack
 
