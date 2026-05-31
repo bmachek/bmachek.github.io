@@ -484,7 +484,7 @@ footer a:hover {
   justify-content: center;
 }
 
-.gallery-lb img {
+.gallery-lb .lb-img {
   max-width: 92vw;
   max-height: 80vh;
   width: auto;
