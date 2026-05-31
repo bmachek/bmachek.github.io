@@ -30,6 +30,18 @@ description: Photography by Bastian Machek — landscape, portrait, urban, and m
   {% endfor %}
 </div>
 
+<div class="gallery-lb" id="gallery-lb" role="dialog" aria-modal="true" aria-label="Lightbox">
+  <button class="lb-close" id="lb-close" aria-label="Schließen">✕</button>
+  <button class="lb-nav-btn lb-prev" id="lb-prev" aria-label="Vorheriges Bild">&#8249;</button>
+  <div class="lb-img-wrap">
+    <img id="lb-img" alt="">
+  </div>
+  <div class="lb-meta">
+    <span id="lb-title"></span><span class="lb-desc" id="lb-desc"></span>
+  </div>
+  <button class="lb-nav-btn lb-next" id="lb-next" aria-label="Nächstes Bild">&#8250;</button>
+</div>
+
 <script>
 (function () {
   var lb = document.getElementById('gallery-lb');
