@@ -9,6 +9,6 @@ order: 7
 
 Get in touch by email:
 
-**<a href="mailto:bastian&#64;machek&#46;cloud">bastian [at] machek [dot] cloud</a>**
+**<a href="mailto:info&#64;fokuspunk&#46;de">info [at] fokuspunk [dot] de</a>**
 
 (The link opens your mail client with the correct address.)
