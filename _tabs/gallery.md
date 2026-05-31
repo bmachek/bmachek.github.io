@@ -1,6 +1,6 @@
 ---
 icon: fas fa-images
-title: Galerie
+title: Gallery
 permalink: /gallery/
 order: 8
 description: Photography by Bastian Machek — landscape, portrait, urban, and macro.
