@@ -1,0 +1,223 @@
+# Gallery photos — sourced from Immich shared album "Blog"
+# URL pattern: /api/assets/{id}/thumbnail?size=preview&key=KEY  (thumb)
+#              /api/assets/{id}/thumbnail?size=preview&key=KEY  (lightbox)
+#
+# Fields: url, thumb, title, category, desc
+
+# ── 2026 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/12cf3081-55cf-4837-859d-519dafa132d1/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/12cf3081-55cf-4837-859d-519dafa132d1/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Mai 2026"
+  category: "Sonstige"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/5b3e6f3c-a5f1-4c16-bacf-e57590780176/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/5b3e6f3c-a5f1-4c16-bacf-e57590780176/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Mai 2026"
+  category: "Sonstige"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/6eb01ca4-bbbb-4804-939e-9bc5fe74fb14/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/6eb01ca4-bbbb-4804-939e-9bc5fe74fb14/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Mai 2026"
+  category: "Sonstige"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/5558244c-7ac5-4334-bb23-abf738d77de4/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/5558244c-7ac5-4334-bb23-abf738d77de4/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Tränendes Herz"
+  category: "Makro"
+  desc: "Lamprocapnos spectabilis"
+
+- url:   "https://photo.machek.cloud/api/assets/90e3d660-9fa1-40f3-be1a-55b844fe08f5/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/90e3d660-9fa1-40f3-be1a-55b844fe08f5/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Frühling in Eching"
+  category: "Makro"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/905deff3-7696-4709-b5cc-348a7472ae2a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/905deff3-7696-4709-b5cc-348a7472ae2a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Frühling"
+  category: "Makro"
+  desc: ""
+
+# ── 2025 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/aff0bc69-893f-4e28-abcd-48d7fa398ea0/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/aff0bc69-893f-4e28-abcd-48d7fa398ea0/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Distelfalter"
+  category: "Natur"
+  desc: "Vanessa cardui auf Sommerflieder"
+
+# ── 2024 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/60b8f0d8-903a-49a8-91e9-1cc7cc035a61/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/60b8f0d8-903a-49a8-91e9-1cc7cc035a61/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Orgel, St. Martinskirche Landshut"
+  category: "Architektur"
+  desc: "Gotisches Rippengewölbe und Orgelempore"
+
+# ── 2023 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/894f38b1-7fb5-4ef4-8439-ec0c80462344/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/894f38b1-7fb5-4ef4-8439-ec0c80462344/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Winterporträt im Wald"
+  category: "Portrait"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/84861b63-c35f-4ec5-b384-2679febacf50/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/84861b63-c35f-4ec5-b384-2679febacf50/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Christkindlmarkt"
+  category: "Portrait"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/f6e22481-0ca3-4a47-a741-ef6b02a3290a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/f6e22481-0ca3-4a47-a741-ef6b02a3290a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Blaue Stunde, Bayern"
+  category: "Landschaft"
+  desc: "Schneelandschaft mit Wintersonnenuntergang"
+
+- url:   "https://photo.machek.cloud/api/assets/0bef0a6d-d8a4-45e9-b870-066417b48605/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/0bef0a6d-d8a4-45e9-b870-066417b48605/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Herbstwald Kronwinkl"
+  category: "Natur"
+  desc: "Herbstliches Kronendach im Gegenlicht"
+
+- url:   "https://photo.machek.cloud/api/assets/69208d02-40af-4714-b943-fd28e6238f04/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/69208d02-40af-4714-b943-fd28e6238f04/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Landshut im Herbst"
+  category: "Landschaft"
+  desc: "Isar und Martinskirche im Herbstmorgen"
+
+- url:   "https://photo.machek.cloud/api/assets/8347fc0d-fca3-430f-a52e-aa52950df64c/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/8347fc0d-fca3-430f-a52e-aa52950df64c/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Kapelle Kronwinkl"
+  category: "Architektur"
+  desc: "Herbstmorgen an der efeubedeckten Backsteinkapelle"
+
+- url:   "https://photo.machek.cloud/api/assets/d7f90b8c-f7cc-4c05-8345-007173343b9f/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/d7f90b8c-f7cc-4c05-8345-007173343b9f/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Pilz im Morgenwald"
+  category: "Natur"
+  desc: "Mystischer Nebel um den Waldpilz"
+
+- url:   "https://photo.machek.cloud/api/assets/dc763d96-4ab2-4cc2-8fbb-879a80a7a627/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/dc763d96-4ab2-4cc2-8fbb-879a80a7a627/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Regenbogen, Ammergauer Alpen"
+  category: "Landschaft"
+  desc: "Dramatisches Licht über den Gipfeln"
+
+- url:   "https://photo.machek.cloud/api/assets/cfc62fae-c4f0-49bb-a82f-311a8d349e05/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/cfc62fae-c4f0-49bb-a82f-311a8d349e05/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Sonnenaufgang am Plansee"
+  category: "Landschaft"
+  desc: "Spiegelung im Plansee, Tirol"
+
+- url:   "https://photo.machek.cloud/api/assets/66ffd199-c74c-42e9-aef4-eb768608ff48/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/66ffd199-c74c-42e9-aef4-eb768608ff48/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Plansee, Tirol"
+  category: "Landschaft"
+  desc: "Straße am Seeufer im ersten Morgenlicht"
+
+- url:   "https://photo.machek.cloud/api/assets/54c35ffa-22b8-41d5-baf8-1bd21c14c27a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/54c35ffa-22b8-41d5-baf8-1bd21c14c27a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Alpine Landschaft"
+  category: "Landschaft"
+  desc: "Almwiesen und Berggipfel"
+
+- url:   "https://photo.machek.cloud/api/assets/d7e932dc-20e6-4793-b2f6-d2bac61920d5/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/d7e932dc-20e6-4793-b2f6-d2bac61920d5/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Tulpenknospe"
+  category: "Makro"
+  desc: "Wassertropfen auf Orangeknospe"
+
+- url:   "https://photo.machek.cloud/api/assets/ac82354a-78c9-4c5d-990a-7f9b21bf8196/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/ac82354a-78c9-4c5d-990a-7f9b21bf8196/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Tulpe, rosa-weiß"
+  category: "Makro"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/c353c5fa-1b17-48e8-bda2-08894def0b13/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/c353c5fa-1b17-48e8-bda2-08894def0b13/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Rote Tulpe"
+  category: "Makro"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/04b1d4af-2dfd-4238-8503-e7463abe79bb/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/04b1d4af-2dfd-4238-8503-e7463abe79bb/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Pfau, Tierpark Irgenod"
+  category: "Tiere"
+  desc: "Radschlagender Pfau"
+
+- url:   "https://photo.machek.cloud/api/assets/961e6e0e-0b49-475a-a055-2e9c6b9a7af2/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/961e6e0e-0b49-475a-a055-2e9c6b9a7af2/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Mantelpavian, Zoo Augsburg"
+  category: "Tiere"
+  desc: ""
+
+- url:   "https://photo.machek.cloud/api/assets/b3d93eb7-63ef-4c3f-8e6f-118020e044a8/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/b3d93eb7-63ef-4c3f-8e6f-118020e044a8/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Wisent-Kälber, Wildpark Poing"
+  category: "Tiere"
+  desc: "Zwei Wisent-Kälber im Winter"
+
+- url:   "https://photo.machek.cloud/api/assets/f37272a1-727e-423a-a40c-d956877aa96a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/f37272a1-727e-423a-a40c-d956877aa96a/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Eurasischer Luchs, Wildpark Poing"
+  category: "Tiere"
+  desc: ""
+
+# ── 2022 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/e1c1d657-dc27-4014-89e2-1df1c8d4375c/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/e1c1d657-dc27-4014-89e2-1df1c8d4375c/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Sonnenaufgang, Bayern"
+  category: "Landschaft"
+  desc: "Nebel und Windrad im Gegenlicht"
+
+- url:   "https://photo.machek.cloud/api/assets/ac4ee08e-9098-4a3a-a365-420413f5b451/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/ac4ee08e-9098-4a3a-a365-420413f5b451/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Herbstlicher Feldweg"
+  category: "Landschaft"
+  desc: "Laubbeschneiter Weg im Sonnenaufgang"
+
+- url:   "https://photo.machek.cloud/api/assets/024816bb-5b96-45e4-af77-0c885b1d796d/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/024816bb-5b96-45e4-af77-0c885b1d796d/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Burg Trausnitz, Landshut"
+  category: "Architektur"
+  desc: "Dramatischer Sonnenaufgang über der Burg"
+
+# ── 2021 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/df39f2bd-a29c-4110-8322-654d316dd9fb/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/df39f2bd-a29c-4110-8322-654d316dd9fb/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Nebelwald Kapfing"
+  category: "Natur"
+  desc: "Herbstnebel zwischen den Baumstämmen"
+
+- url:   "https://photo.machek.cloud/api/assets/21a25b62-4a29-4b44-9a09-82eb42687667/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/21a25b62-4a29-4b44-9a09-82eb42687667/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Morgenwald Kapfing"
+  category: "Natur"
+  desc: "Blaues Morgenlicht im Nebelwald"
+
+- url:   "https://photo.machek.cloud/api/assets/bb0c93f3-0165-4d2d-9706-3d655730ed65/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/bb0c93f3-0165-4d2d-9706-3d655730ed65/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Sonnenaufgang, Eching"
+  category: "Landschaft"
+  desc: "Sonne hinter Kirchturmspitze St. Vitus"
+
+# ── 2020 ──────────────────────────────────────────────────────────────────────
+
+- url:   "https://photo.machek.cloud/api/assets/2397594a-e4b3-4f8b-a63e-c751a72f554b/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/2397594a-e4b3-4f8b-a63e-c751a72f554b/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Herbstspaziergang"
+  category: "Landschaft"
+  desc: "Goldenes Herbstlicht im Laubwald"
+
+- url:   "https://photo.machek.cloud/api/assets/ed24bc23-10ca-48b6-8b57-c681a9435ffa/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  thumb: "https://photo.machek.cloud/api/assets/ed24bc23-10ca-48b6-8b57-c681a9435ffa/thumbnail?size=preview&key=IKpAZ0SPO64FpWaBnHBvcLLGvmS9c4IR0esqpF6mExrTFYjD-bK5J8BjbFIREwHt1y8"
+  title: "Alte Telefonzelle"
+  category: "Urban"
+  desc: "Verwitterte pinke Telefonzelle am Feldweg"

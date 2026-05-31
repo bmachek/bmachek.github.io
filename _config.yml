@@ -19,13 +19,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Bastian Machek
-  email: bastian@machek.cloud # change to your email address
+  name: Bastian Machek / Fokuspunk
+  email: info@fokuspunk.de
   links:
     # The first element serves as the copyright owner's link
-    - https://bmachek.github.io
+    - https://blog.fokuspunk.de
     - https://www.github.com/bmachek/
-    - https://www.facebook.com/bastian.machek
     - https://www.instagram.com/fokuspunk/
     - https://www.fokuspunk.de
 

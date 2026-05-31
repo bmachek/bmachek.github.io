@@ -12,7 +12,7 @@ sitemap: false
 Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
 **Bastian Machek**  
-E-Mail: bastian@machek.cloud  
+E-Mail: cidpbuddy@fokuspunk.de
 Website: [blog.fokuspunk.de](https://blog.fokuspunk.de)
 
 ---
