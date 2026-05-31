@@ -50,6 +50,8 @@ description: >-
 }
 </script>
 
+![Immich Logo](/assets/img/lrc-immich-plugin/immich-logo.svg){: width="80" .left }
+
 The **Lightroom Immich Plugin** (`lrc-immich-plugin`) is a free, open-source plugin that lets you **upload, sync, back up and import** photos between **Adobe Lightroom Classic** and an [Immich](https://immich.app/) server through the Immich API. Use it as an **export** preset or a **publish service** to keep your Lightroom catalog and your self-hosted Immich library in sync.
 
 **Source:** [github.com/bmachek/lrc-immich-plugin](https://github.com/bmachek/lrc-immich-plugin) · [Releases](https://github.com/bmachek/lrc-immich-plugin/releases) · [Issues](https://github.com/bmachek/lrc-immich-plugin/issues)

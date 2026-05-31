@@ -7,6 +7,8 @@ order: 3
 
 ## LrGeniusAI
 
+![LrGenius Logo](/assets/img/lrgenius/lrgenius-logo.png){: width="80" .left }
+
 **lrc-ai-assistant** has been replaced by **LrGeniusAI** — a smart Lightroom Classic plugin for AI-powered tagging, describing, and semantic image search.
 
 [LrGeniusAI](https://lrgenius.com) brings modern Large Language Models (LLMs) into Adobe Lightroom Classic: it analyzes your photos, generates accurate tags and detailed descriptions, and lets you search your library with natural language. You can run local models for maximum privacy or use cloud APIs; the plugin fits into your workflow either way.
