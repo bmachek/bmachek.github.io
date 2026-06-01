@@ -1,0 +1,36 @@
+# Bastian Machek / Fokuspunk
+
+> Bastian Machek (known online as Fokuspunk) is a photographer and free software developer based in southern Germany. He builds Lightroom Classic plugins and mobile health apps.
+
+## Projects
+
+### LrGeniusAI
+AI-powered Lightroom Classic plugin for automatic photo tagging, image descriptions, and semantic natural-language search. Supports local models (Ollama, LM Studio) and cloud models (Google Gemini, Vertex AI). Uses a Python backend (geniusai-server) with Open-CLIP embeddings.
+- [LrGeniusAI project page](https://blog.fokuspunk.de/LrGeniusAI/)
+- [LrGeniusAI website & download](https://lrgenius.com)
+- [LrGeniusAI on GitHub](https://github.com/LrGenius/LrGeniusAI)
+- [LrGeniusAI help documentation](https://lrgenius.com/help/)
+
+### LR Immich Plugin (lrc-immich-plugin)
+Free, open-source Lightroom Classic plugin to upload, sync, back up, and import photos between Adobe Lightroom Classic and a self-hosted Immich server via the Immich API. Supports export presets, publish services, album sync, duplicate detection, and stacking.
+- [LR Immich Plugin project page](https://blog.fokuspunk.de/lrc-immich-plugin/)
+- [LR Immich Plugin on GitHub](https://github.com/bmachek/lrc-immich-plugin)
+- [Download latest release](https://github.com/bmachek/lrc-immich-plugin/releases/latest/)
+
+### CIDP Buddy
+Free Flutter app for patients with Chronic Inflammatory Demyelinating Polyneuropathy (CIDP). Manages infusion and medication schedules, supply inventory, smart scheduling, and a vitals and symptom diary. Released under GPL v3.
+- [CIDP Buddy project page](https://blog.fokuspunk.de/cidp-buddy/)
+- [CIDP Buddy on GitHub](https://github.com/bmachek/CIDPbuddy)
+
+## How-to guides
+
+- [How to install the Lightroom Immich Plugin (Windows & macOS)](https://blog.fokuspunk.de/posts/install-lightroom-immich-plugin/) — Download, add in Plug-in Manager, create an API key, connect to Immich, upload photos.
+- [How to back up your Lightroom Classic photos to Immich](https://blog.fokuspunk.de/posts/back-up-lightroom-photos-to-immich/) — One-shot export or living publish service for ongoing backup to a self-hosted Immich server.
+- [Sync Lightroom albums to Immich with a Publish Service](https://blog.fokuspunk.de/posts/sync-lightroom-albums-to-immich/) — Keep Lightroom collections and Immich albums in sync automatically.
+
+## About
+
+- [About Bastian Machek](https://blog.fokuspunk.de/about-me/)
+- [Photography gallery — fokuspunk.de](https://www.fokuspunk.de)
+- [GitHub — github.com/bmachek](https://github.com/bmachek)
+- [Instagram — @fokuspunk](https://www.instagram.com/fokuspunk/)
