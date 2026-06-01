@@ -17,7 +17,7 @@ I focus on what I love: **photography** and **building free software**.
 
 ### Photography
 
-Under the name **[Fokuspunk](https://www.fokuspunk.de)** I share a selection of my work. You can find more on [Instagram @fokuspunk](https://instagram.com/fokuspunk).
+You can find more on [Instagram @fokuspunk](https://instagram.com/fokuspunk).
 
 ---
 
@@ -31,9 +31,15 @@ Outside photography I'm building [**CIDP Buddy**](https://github.com/bmachek/CID
 
 ---
 
+### Ask AI about me
+
+- [ChatGPT — "Who is Bastian Machek?"](https://chatgpt.com/?q=Who+is+Bastian+Machek%3F)
+- [Perplexity — "Who is Bastian Machek?"](https://www.perplexity.ai/search?q=Who+is+Bastian+Machek%3F)
+- [Gemini — "Who is Bastian Machek?"](https://gemini.google.com/app?q=Who+is+Bastian+Machek%3F)
+- [Claude — "Who is Bastian Machek?"](https://claude.ai/new?q=Who+is+Bastian+Machek%3F)
+
 ### Links
 
-- [fokuspunk.de](https://www.fokuspunk.de) — Photography gallery
 - [blog.fokuspunk.de](https://blog.fokuspunk.de) — Tech blog
 - [Instagram @fokuspunk](https://instagram.com/fokuspunk)
 - [GitHub](https://github.com/bmachek)
