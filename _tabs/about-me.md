@@ -1,6 +1,10 @@
 ---
 icon: fas fa-info-circle
+title: About Me
 order: 6
+description: >-
+  Bastian Machek (Fokuspunk) — photographer and free software developer from southern Germany.
+  Creator of LrGeniusAI (AI Lightroom plugin), the LR Immich Plugin, and CIDP Buddy.
 ---
 
 ## Bastian Machek
