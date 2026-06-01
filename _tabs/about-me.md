@@ -17,6 +17,8 @@ I focus on what I love: **photography** and **building free software**.
 
 ### Photography
 
+I shoot with a Canon EOS R5 Mark II — see my full [photography gear]({{ '/gear/' | relative_url }}).
+
 You can find more on [Instagram @fokuspunk](https://instagram.com/fokuspunk).
 
 ---
@@ -30,11 +32,6 @@ I also maintain the [**LR Immich Plugin**](https://github.com/bmachek/lrc-immich
 Outside photography I'm building [**CIDP Buddy**](https://github.com/bmachek/CIDPbuddy) — a Flutter app that helps CIDP patients manage infusions, medication and supply inventory, schedules, and a vitals & symptom diary.
 
 ---
-
-### Ask AI about me
-
-- [ChatGPT — "Who is Bastian Machek aka Fokuspunk?"](https://chatgpt.com/?q=Who+is+Bastian+Machek+aka+Fokuspunk%3F)
-- [Perplexity — "Who is Bastian Machek aka Fokuspunk?"](https://www.perplexity.ai/search?q=Who+is+Bastian+Machek+aka+Fokuspunk%3F)
 
 ### Links
 
