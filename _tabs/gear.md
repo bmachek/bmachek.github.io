@@ -18,10 +18,10 @@ description: >-
 
 | Lens | Mount | Notes |
 |---|---|---|
-| **Sigma 12-24mm f/4 DG HSM Art** | EF (via adapter) | Ultra-wide zoom |
+| **Sigma 12-24mm f/4 DG HSM Art** | EF | Ultra-wide zoom |
 | **Canon RF 28-70mm f/2L USM** | RF | Standard zoom, constant f/2 |
 | **Canon RF 45mm f/1.2 STM** | RF | Fast prime |
-| **Canon EF 100mm f/2.8L Macro IS USM** | EF (via adapter) | 1:1 macro |
+| **Canon EF 100mm f/2.8L Macro IS USM** | EF | 1:1 macro |
 | **Canon RF 70-200mm f/2.8L IS USM** | RF | Telephoto zoom |
 | **Canon RF 100-400mm f/5.6-8 IS USM** | RF | Long telephoto zoom |
 | **Canon RF 200-800mm f/6.3-9 IS USM** | RF | Super-telephoto zoom |
