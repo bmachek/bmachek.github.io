@@ -22,9 +22,7 @@ description: Photography by Bastian Machek — landscape, portrait, urban, and m
        data-title="{{ photo.title }}"
        data-desc="{{ photo.desc | default: '' }}"
        data-cat="{{ photo.category }}">
-    <img src="{{ photo.thumb | default: photo.url }}"
-         alt="{{ photo.title }}"
-         loading="lazy">
+    <a tabindex="-1"><img src="{{ photo.thumb | default: photo.url }}" alt="{{ photo.title }}" loading="lazy"></a>
     <div class="gallery-caption">{{ photo.title }}</div>
   </div>
   {% endfor %}
@@ -88,16 +86,13 @@ description: Photography by Bastian Machek — landscape, portrait, urban, and m
     lbDesc.textContent = item.dataset.desc ? ' — ' + item.dataset.desc : '';
   }
 
-  // Use capture phase so our handler runs before GLightbox's bubble-phase handler
-  // on the <a class="popup"> anchors Chirpy injects around thumbnail images.
   document.querySelectorAll('.gallery-item').forEach(function (item) {
     item.addEventListener('click', function (e) {
       e.preventDefault();
-      e.stopPropagation();
       var visible = getVisible();
       var idx = visible.indexOf(item);
       openLb(idx >= 0 ? idx : 0);
-    }, true);
+    });
   });
 
   document.querySelectorAll('.gallery-filter').forEach(function (btn) {
