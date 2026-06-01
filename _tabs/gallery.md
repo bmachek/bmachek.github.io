@@ -45,8 +45,6 @@ description: Photography by Bastian Machek — landscape, portrait, urban, and m
   var lbTitle = document.getElementById('lb-title');
   var lbDesc = document.getElementById('lb-desc');
 
-  // Create the img element dynamically so Chirpy's refactor-content.html
-  // (which drops <img> tags without src and all subsequent content) never sees it.
   var lbImg = document.createElement('img');
   lbImg.className = 'lb-img';
   lbWrap.appendChild(lbImg);
