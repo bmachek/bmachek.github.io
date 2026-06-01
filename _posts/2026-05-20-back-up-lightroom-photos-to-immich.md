@@ -6,6 +6,26 @@ tags: [lrc-immich-plugin, immich, lightroom, backup, self-hosted]
 description: >-
   A step-by-step guide to backing up your Adobe Lightroom Classic library to a
   self-hosted Immich server using the free, open-source Lightroom Immich Plugin.
+howto:
+  name: "How to back up Lightroom Classic photos to Immich"
+  steps:
+    - name: "Install the Lightroom Immich Plugin"
+      text: "Download the latest release from github.com/bmachek/lrc-immich-plugin/releases/latest/ and add it in Lightroom Classic via File → Plug-in Manager → Add, pointing at the unzipped plugin folder."
+    - name: "Connect to your Immich server"
+      text: "In an export preset or publish service settings, enter your Immich server URL and API key. The key needs upload, album, and read permissions."
+    - name: "Choose Export or Publish"
+      text: "Use Export for a one-shot archive of a finished shoot. Use a Publish Service for an ongoing backup: add, edit, or remove photos in Lightroom, and the next publish updates Immich to match."
+    - name: "Enable stacking (optional)"
+      text: "Turn on stacking to group raw and edited versions of the same image into Immich stacks, so your Immich timeline mirrors how you organize in Lightroom."
+faq:
+  - q: "Does the plugin prevent duplicate uploads to Immich?"
+    a: "Yes. The plugin detects duplicates by Lightroom catalog ID, or by date and filename, so re-running an export or publish will not create copies."
+  - q: "What is the difference between Export and Publish for backup?"
+    a: "Export is a one-time push, ideal for archiving finished shoots. Publish creates a live link: add, edit, or remove photos in Lightroom and the next publish updates Immich to match, including creating and renaming albums."
+  - q: "Does the plugin work with raw files?"
+    a: "Yes. The plugin uploads files from your Lightroom catalog, including raws. Enable stacking to group raw and edited versions under a primary image in Immich."
+  - q: "Can I back up to a self-hosted Immich server?"
+    a: "Yes. The plugin connects to any Immich instance via its URL and API key, including self-hosted servers on a local network or VPN."
 ---
 
 If you edit in **Adobe Lightroom Classic** and self-host your photos with [Immich](https://immich.app/), you can keep a full, automatic backup of your library in Immich without leaving Lightroom. This guide shows you how, using the free, open-source [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}).
@@ -47,3 +67,25 @@ If you keep raw + edited versions, enable **stacking**. On upload the plugin gro
 Once connected, backing up is just hitting **Export** or **Publish**. Your Lightroom edits land in Immich, deduplicated and organized.
 
 Questions or a feature idea? Open an [issue](https://github.com/bmachek/lrc-immich-plugin/issues) or [discussion](https://github.com/bmachek/lrc-immich-plugin/discussions) on GitHub.
+
+## Frequently asked questions
+
+**Does the plugin prevent duplicate uploads?**
+
+Yes. The plugin detects duplicates by Lightroom catalog ID, or by date and filename — re-running an export or publish will not create copies.
+
+**What is the difference between Export and Publish for backup?**
+
+**Export** is a one-time push, ideal for archiving a finished shoot. **Publish** creates a live link: add, edit, or remove photos in Lightroom and the next publish updates Immich to match, including creating and renaming albums. For true ongoing backup, use Publish.
+
+**Does the plugin work with raw files?**
+
+Yes. The plugin uploads files from your Lightroom catalog, including raws. Enable **stacking** to group raw and edited versions under a primary image in Immich.
+
+**Can I back up to a self-hosted Immich server?**
+
+Yes. The plugin connects to any Immich instance via its URL and API key — including self-hosted servers on a home network or reachable over VPN.
+
+**What do I need to get started?**
+
+Adobe Lightroom Classic (Windows or macOS), a running Immich server, an Immich API key, and the [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}) (free and open source).
