@@ -33,10 +33,8 @@ Outside photography I'm building [**CIDP Buddy**](https://github.com/bmachek/CID
 
 ### Ask AI about me
 
-- [ChatGPT — "Who is Bastian Machek?"](https://chatgpt.com/?q=Who+is+Bastian+Machek%3F)
-- [Perplexity — "Who is Bastian Machek?"](https://www.perplexity.ai/search?q=Who+is+Bastian+Machek%3F)
-- [Gemini — "Who is Bastian Machek?"](https://gemini.google.com/app?q=Who+is+Bastian+Machek%3F)
-- [Claude — "Who is Bastian Machek?"](https://claude.ai/new?q=Who+is+Bastian+Machek%3F)
+- [ChatGPT — "Who is Bastian Machek aka Fokuspunk?"](https://chatgpt.com/?q=Who+is+Bastian+Machek+aka+Fokuspunk%3F)
+- [Perplexity — "Who is Bastian Machek aka Fokuspunk?"](https://www.perplexity.ai/search?q=Who+is+Bastian+Machek+aka+Fokuspunk%3F)
 
 ### Links
 
