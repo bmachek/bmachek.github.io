@@ -1,14 +1,3 @@
-<!-- Force SW update check on every page load, after deferred scripts have run -->
-{% if site.pwa.enabled and site.pwa.cache.enabled %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(function(reg) { reg.update(); });
-  }
-});
-</script>
-{% endif %}
-
 <!-- Custom design overrides -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
