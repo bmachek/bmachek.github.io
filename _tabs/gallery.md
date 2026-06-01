@@ -22,7 +22,7 @@ description: Photography by Bastian Machek — landscape, portrait, urban, and m
        data-title="{{ photo.title }}"
        data-desc="{{ photo.desc | default: '' }}"
        data-cat="{{ photo.category }}">
-    <a tabindex="-1"><img src="{{ photo.thumb | default: photo.url }}" alt="{{ photo.title }}" loading="lazy"></a>
+    <a href="#" tabindex="-1"><img src="{{ photo.thumb | default: photo.url }}" alt="{{ photo.title }}" loading="lazy"></a>
     <div class="gallery-caption">{{ photo.title }}</div>
   </div>
   {% endfor %}
