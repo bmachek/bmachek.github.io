@@ -20,3 +20,60 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for item in page.faq %}{"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
 </script>
 {% endif %}
+
+{% if jekyll.environment == 'production' %}
+<style>
+#cm-banner{position:fixed;bottom:0;left:0;right:0;z-index:10000;background:var(--bm-bg-elevated,#161b22);border-top:1px solid var(--bm-border,#30363d);color:var(--bm-text,#e6edf3);font-family:var(--bm-font-mono,"JetBrains Mono",monospace);font-size:.85rem;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+#cm-banner p{margin:0;flex:1;min-width:200px}
+#cm-banner .cm-btns{display:flex;gap:.5rem;flex-shrink:0}
+#cm-banner button{border:1px solid var(--bm-border,#30363d);background:var(--bm-bg,#0d1117);color:var(--bm-text,#e6edf3);font-family:inherit;font-size:.82rem;padding:.35rem .85rem;border-radius:4px;cursor:pointer;transition:filter .15s}
+#cm-banner #cm-accept{background:var(--bm-accent,#7ee787);border-color:var(--bm-accent,#7ee787);color:#0d1117}
+#cm-banner button:hover{filter:brightness(1.12)}
+</style>
+<script>
+(function(){
+  var KEY='analytics_consent';
+  var GA='{{ site.analytics.google.id }}';
+  var CL='x0mfdt9s3g';
+
+  function loadGA(){
+    if(!GA)return;
+    var s=document.createElement('script');
+    s.defer=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;
+    gtag('js',new Date());gtag('config',GA);
+  }
+
+  function loadClarity(){
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,'clarity','script',CL);
+  }
+
+  function activate(){loadGA();loadClarity();}
+
+  var consent=localStorage.getItem(KEY);
+  if(consent==='granted'){
+    activate();
+  } else if(!consent){
+    document.addEventListener('DOMContentLoaded',function(){
+      var b=document.createElement('div');
+      b.id='cm-banner';
+      b.innerHTML='<p>Diese Seite nutzt Analysedienste (Google Analytics &amp; Microsoft Clarity), um zu verstehen, wie Besucher die Seite verwenden. Es werden keine personenbezogenen Daten verkauft.</p><div class="cm-btns"><button id="cm-decline">Ablehnen</button><button id="cm-accept">Akzeptieren</button></div>';
+      document.body.appendChild(b);
+      document.getElementById('cm-accept').onclick=function(){
+        localStorage.setItem(KEY,'granted');b.remove();activate();
+      };
+      document.getElementById('cm-decline').onclick=function(){
+        localStorage.setItem(KEY,'denied');b.remove();
+      };
+    });
+  }
+})();
+</script>
+{% endif %}
