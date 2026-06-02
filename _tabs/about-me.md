@@ -9,7 +9,7 @@ description: >-
 
 ## Bastian Machek
 
-IT nerd in his mid-forties, living in southern Germany. Married, father of a little boy.
+IT nerd in his mid-forties, living in southern Germany. Married, father of a little boy. I live with **CIDP** (Chronic Inflammatory Demyelinating Polyneuropathy), a rare autoimmune nerve disease.
 
 I focus on what I love: **photography** and **building free software**.
 
@@ -29,7 +29,7 @@ I'm **creator and lead developer** of [**LrGeniusAI**](https://lrgenius.com): a 
 
 I also maintain the [**LR Immich Plugin**](https://github.com/bmachek/lrc-immich-plugin), which connects Lightroom Classic with [Immich](https://immich.app/) for export, publish, and import workflows.
 
-Outside photography I'm building [**CIDP Buddy**](https://github.com/bmachek/CIDPbuddy) — a Flutter app that helps CIDP patients manage infusions, medication and supply inventory, schedules, and a vitals & symptom diary.
+Outside photography I'm building [**CIDP Buddy**](https://github.com/bmachek/CIDPbuddy) — as a CIDP patient myself, I built this Flutter app to help patients manage infusions, medication and supply inventory, schedules, and a vitals & symptom diary.
 
 ---
 

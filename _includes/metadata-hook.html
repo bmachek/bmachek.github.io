@@ -64,7 +64,7 @@
     document.addEventListener('DOMContentLoaded',function(){
       var b=document.createElement('div');
       b.id='cm-banner';
-      b.innerHTML='<p>Diese Seite nutzt Analysedienste (Google Analytics &amp; Microsoft Clarity), um zu verstehen, wie Besucher die Seite verwenden. Es werden keine personenbezogenen Daten verkauft.</p><div class="cm-btns"><button id="cm-decline">Ablehnen</button><button id="cm-accept">Akzeptieren</button></div>';
+      b.innerHTML='<p>This site uses analytics (Google Analytics &amp; Microsoft Clarity) to understand how visitors use it. No personal data is sold.</p><div class="cm-btns"><button id="cm-decline">Decline</button><button id="cm-accept">Accept</button></div>';
       document.body.appendChild(b);
       document.getElementById('cm-accept').onclick=function(){
         localStorage.setItem(KEY,'granted');b.remove();activate();
