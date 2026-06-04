@@ -28,3 +28,9 @@ Doing stuff with **cameras and computers** — photography and free software.
 - [About me]({{ '/about-me/' | relative_url }})
 - [GitHub](https://github.com/bmachek)
 - [Instagram @fokuspunk](https://instagram.com/fokuspunk)
+
+---
+
+### From the blog
+
+- [Taking a break from open source]({{ '/posts/taking-a-break-from-open-source/' | relative_url }})
