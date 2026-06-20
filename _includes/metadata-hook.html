@@ -36,7 +36,6 @@
 (function(){
   var KEY='analytics_consent';
   var GA='{{ site.analytics.google.id }}';
-  var CL='x0mfdt9s3g';
 
   function loadGA(){
     if(!GA)return;
@@ -49,27 +48,17 @@
     gtag('js',new Date());gtag('config',GA);
   }
 
-  function loadClarity(){
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window,document,'clarity','script',CL);
-  }
-
-  function activate(){loadGA();loadClarity();}
-
   var consent=localStorage.getItem(KEY);
   if(consent==='granted'){
-    activate();
+    loadGA();
   } else if(!consent){
     document.addEventListener('DOMContentLoaded',function(){
       var b=document.createElement('div');
       b.id='cm-banner';
-      b.innerHTML='<p>This site uses analytics (Google Analytics &amp; Microsoft Clarity) to understand how visitors use it. No personal data is sold.</p><div class="cm-btns"><button id="cm-decline">Decline</button><button id="cm-accept">Accept</button></div>';
+      b.innerHTML='<p>This site uses Google Analytics to understand how visitors use it. No personal data is sold.</p><div class="cm-btns"><button id="cm-decline">Decline</button><button id="cm-accept">Accept</button></div>';
       document.body.appendChild(b);
       document.getElementById('cm-accept').onclick=function(){
-        localStorage.setItem(KEY,'granted');b.remove();activate();
+        localStorage.setItem(KEY,'granted');b.remove();loadGA();
       };
       document.getElementById('cm-decline').onclick=function(){
         localStorage.setItem(KEY,'denied');b.remove();
