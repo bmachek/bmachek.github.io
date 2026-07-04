@@ -1,6 +1,6 @@
 ---
 title: "How to let Claude run your Instagram and Facebook with social-mcp"
-date: 2026-07-04 09:00:00 +0200
+date: 2026-07-04 00:00:00 +0200
 categories: [social-mcp, AI]
 tags: [social-mcp, mcp, claude, instagram, facebook, self-hosted, automation]
 description: >-
