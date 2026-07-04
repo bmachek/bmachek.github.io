@@ -1,6 +1,6 @@
 ---
 title: "How to publish Lightroom photos to a self-hosted PicPeak gallery"
-date: 2026-07-04 09:00:00 +0200
+date: 2026-07-04 00:00:00 +0200
 categories: [PicPeak, Lightroom]
 tags: [lrc-picpeak, picpeak, lightroom, client-gallery, installation]
 description: >-
