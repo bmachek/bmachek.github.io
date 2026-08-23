@@ -5,8 +5,9 @@ permalink: /LrGeniusAI/
 order: 3
 description: >-
   LrGeniusAI is an AI-powered Lightroom Classic plugin for automatic photo tagging,
-  image descriptions, and semantic natural-language search using local (Ollama, LM Studio)
-  or cloud (Gemini, Vertex AI) models.
+  image descriptions, face recognition, species identification, and semantic
+  natural-language search — with built-in local AI (MLX on macOS, llama.cpp on Windows)
+  or cloud models (Gemini, OpenAI).
 ---
 
 <!-- SoftwareApplication + FAQ structured data for rich results -->
@@ -19,7 +20,7 @@ description: >-
       "name": "LrGeniusAI",
       "operatingSystem": "Windows, macOS",
       "applicationCategory": "MultimediaApplication",
-      "description": "AI-powered Lightroom Classic plugin that uses Large Language Models to tag and describe photos and enables semantic natural-language search across your library.",
+      "description": "AI-powered Lightroom Classic plugin that uses Large Language Models to tag and describe photos, recognises faces, identifies species on-device, and enables semantic natural-language search across your library.",
       "url": "https://blog.fokuspunk.de/LrGeniusAI/",
       "sameAs": "https://lrgenius.com",
       "downloadUrl": "https://github.com/LrGenius/LrGeniusAI/releases",
@@ -33,17 +34,17 @@ description: >-
         {
           "@type": "Question",
           "name": "What is LrGeniusAI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It supports local models via Ollama and LM Studio, and cloud models including Google Gemini and Vertex AI." }
+          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It ships built-in local AI (MLX on macOS, llama.cpp on Windows), and also supports Ollama, LM Studio, Google Gemini and ChatGPT/OpenAI." }
         },
         {
           "@type": "Question",
           "name": "Does LrGeniusAI work with local AI models?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LrGeniusAI supports Ollama and LM Studio for fully local, private AI processing. You can also use cloud models such as Google Gemini and Vertex AI, or switch between local and cloud as needed." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LrGeniusAI runs vision models itself — MLX on macOS (Apple silicon) and llama.cpp on Windows — so no external app is required. It also supports Ollama and LM Studio, or cloud models such as Google Gemini and ChatGPT/OpenAI. Switch between local and cloud as needed." }
         },
         {
           "@type": "Question",
           "name": "How does the semantic search in LrGeniusAI work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI builds a vector index of your photos using Open-CLIP embeddings. Enter a natural-language description (e.g. 'red sports car parked in front of a garage') and the plugin returns a relevance-sorted Collection in Lightroom." }
+          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI builds a vector index of your photos using SigLIP2 embeddings, stored in a local LanceDB database. Enter a natural-language description (e.g. 'red sports car parked in front of a garage') and the plugin returns a relevance-sorted Collection in Lightroom." }
         },
         {
           "@type": "Question",
@@ -68,17 +69,30 @@ description: >-
 
 - **AI-powered tagging & describing** — LLMs recognize image content and generate metadata and detailed descriptions.
 - **Semantic free-text search** — Find images by describing what you want (e.g. *"Red sports car parked in front of a garage"*). LrGeniusAI builds a relevance-sorted Collection in Lightroom from your prompt.
-- **Local & cloud models** — **Ollama** and **LM Studio** for local AI; **Google Gemini** and **Vertex AI** for cloud. Switch as needed.
+- **Built-in local AI** — The backend runs vision models itself: **MLX** on macOS (Apple silicon) and **llama.cpp** on Windows. Pick a model in the Plug-In Manager and click *Download* — no external app needed.
+- **Local & cloud models** — Also works with **Ollama** and **LM Studio**, or cloud providers **Google Gemini** and **ChatGPT/OpenAI**.
+- **People & faces** — Detect and cluster faces, name persons, browse person collections, and find similar faces across the catalog.
+- **Species identification (on-device)** — Identify animals, plants and fungi down to the species with **BioCLIP 2**, running entirely on your machine.
 - **Customizable prompts & temperature** — Edit system prompts and control creativity vs consistency in the Plug-In Manager.
 - **Photo context** — Add hints (names, background details) in a dialog or in Lightroom’s metadata panel so the AI can use them.
-- **Custom Python backend** — Uses a local server (geniusai-server) you can import existing catalog metadata before the first AI run.
+- **Custom Rust backend** — A local server (`geniusai-server`) written in Rust for low memory overhead. Import existing catalog metadata before the first AI run.
 
 ### Tech stack
 
-- **Plugin:** Lua  
-- **Backend:** Python ([geniusai-server](https://github.com/LrGenius/geniusai-server))  
-- **AI & embeddings:** Open-CLIP  
-- **Supported:** Gemini, Vertex AI, Ollama, LM Studio, OpenAI
+- **Plugin:** Lua (Lightroom Classic SDK)  
+- **Backend:** Rust — `geniusai-server`, an [axum](https://github.com/tokio-rs/axum) HTTP service that runs locally alongside Lightroom  
+- **Embeddings & semantic search:** SigLIP2 via ONNX Runtime  
+- **Faces:** YuNet (detection) + FaceNet (embeddings), ONNX  
+- **Species:** BioCLIP 2 (ONNX) with a pruned TreeOfLife taxonomy head  
+- **Local inference:** MLX on macOS (Apple silicon, Metal helper process); llama.cpp compiled into the backend on Windows (GGUF, Vulkan)  
+- **Database:** LanceDB  
+- **Supported model providers:** built-in MLX (macOS), built-in llama.cpp (Windows), Google Gemini, ChatGPT/OpenAI, Ollama, LM Studio  
+- **License:** AGPL-3.0
+
+> The backend used to be a Python/Flask server; it was rewritten in Rust and now lives in the
+> [LrGeniusAI repository](https://github.com/LrGenius/LrGeniusAI) under `server-rs/`. The old
+> `geniusai-server` repository is archived. **Google Vertex AI support was removed in August 2026.**
+{: .prompt-info }
 
 ### Get it
 
@@ -90,15 +104,15 @@ description: >-
 
 **What is LrGeniusAI?**
 
-LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It supports local models via Ollama and LM Studio, and cloud models including Google Gemini and Vertex AI.
+LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It ships built-in local AI (MLX on macOS, llama.cpp on Windows), and also supports Ollama, LM Studio, Google Gemini and ChatGPT/OpenAI.
 
 **Does LrGeniusAI work with local AI models?**
 
-Yes. LrGeniusAI supports Ollama and LM Studio for fully local, private AI processing. You can also use cloud models such as Google Gemini and Vertex AI, or switch between local and cloud as needed.
+Yes. LrGeniusAI runs vision models itself — **MLX** on macOS (Apple silicon) and **llama.cpp** on Windows — so no external app is required for fully local, private processing. It also supports Ollama and LM Studio, or cloud models such as Google Gemini and ChatGPT/OpenAI.
 
 **How does the semantic search work?**
 
-LrGeniusAI builds a vector index of your photos using Open-CLIP embeddings. Enter a natural-language description (e.g. *"red sports car parked in front of a garage"*) and the plugin returns a relevance-sorted Collection in Lightroom Classic.
+LrGeniusAI builds a vector index of your photos using **SigLIP2** embeddings, stored in a local **LanceDB** database. Enter a natural-language description (e.g. *"red sports car parked in front of a garage"*) and the plugin returns a relevance-sorted Collection in Lightroom Classic.
 
 **Where can I download LrGeniusAI?**
 
