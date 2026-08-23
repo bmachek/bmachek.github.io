@@ -24,7 +24,6 @@ description: >-
 | **Canon EF 100mm f/2.8L Macro IS USM** | EF | 1:1 macro |
 | **Canon RF 70-200mm f/2.8L IS USM** | RF | Telephoto zoom |
 | **Canon RF 100-400mm f/5.6-8 IS USM** | RF | Long telephoto zoom |
-| **Canon RF 200-800mm f/6.3-9 IS USM** | RF | Super-telephoto zoom |
 
 ## Software
 
