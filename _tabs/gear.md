@@ -34,4 +34,3 @@ description: >-
 | **[LrGeniusAI](https://lrgenius.com)** | AI keywording, descriptions & semantic search for Lightroom |
 | **DxO PureRAW 5** | AI-based RAW pre-processing & noise reduction |
 | **[Immich](https://immich.app) + [LR Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }})** | Self-hosted photo library & Lightroom sync |
-| **Nik Collection** | Creative filters & adjustments |
