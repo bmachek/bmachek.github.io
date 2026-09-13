@@ -1,129 +1,97 @@
 ---
 title: "How to publish Lightroom photos to a self-hosted PicPeak gallery"
 date: 2026-07-04 00:00:00 +0200
+last_modified_at: 2026-09-13 12:00:00 +0200
 categories: [PicPeak, Lightroom]
 tags: [lrc-picpeak, picpeak, lightroom, client-gallery, installation]
 description: >-
-  Install the free Lightroom PicPeak Plugin in Lightroom Classic, connect it to
-  your self-hosted PicPeak server with an API token, and deliver client galleries
-  by export or publish service — without leaving Lightroom.
+  Connect Lightroom Classic to PicPeak, publish client galleries and bring
+  proofing ratings back to RAW files. A guide by Bastian Machek / Fokuspunk.
 howto:
-  name: "How to publish Lightroom photos to a self-hosted PicPeak gallery"
+  name: "Publish Lightroom photos to PicPeak"
   steps:
     - name: "Download the plugin"
-      text: "Download or clone github.com/PicPeak/plugin-lightroom and unzip it to a permanent location such as your Documents folder — not a Downloads folder you might clear."
+      text: "Download or clone github.com/PicPeak/plugin-lightroom into a permanent folder."
     - name: "Add the plugin in Lightroom Classic"
-      text: "Open Lightroom Classic, go to File → Plug-in Manager, click Add, and point it at the picpeak-plugin.lrplugin/ directory. Click Done."
-    - name: "Create a PicPeak API token"
-      text: "In PicPeak, create an API token with write and admin scopes. This lets the plugin create events and upload photos."
-    - name: "Connect the plugin to PicPeak"
-      text: "In the Export or Publish dialog, open the PicPeak Server section, enter your server URL and API token, and click Test Connection."
-    - name: "Export or publish your photos"
-      text: "Export selected photos to a PicPeak event for a one-time delivery, or set up a Publish Service collection to keep an event in sync with a Lightroom collection."
+      text: "Use File → Plug-in Manager → Add and select picpeak-plugin.lrplugin."
+    - name: "Connect your server"
+      text: "Open Library → Plug-in Extras → PicPeak Overview, choose Config, enter your server URL and sign in. For SSO or reCAPTCHA, paste a manually created API token under Advanced."
+    - name: "Publish photos"
+      text: "Use PicPeak Exporter for a one-time delivery or a Publish Service for an ongoing collection."
+    - name: "Bring selections back"
+      text: "Use PicPeak Importer to match event photos to local RAW files and apply ratings and labels under your chosen conflict policy."
 faq:
-  - q: "What is PicPeak?"
-    a: "PicPeak is an open-source, self-hosted photo-sharing platform for delivering time-limited, password-protected client galleries while keeping your data on your own server. The Lightroom PicPeak Plugin uploads photos from Lightroom Classic straight into it."
   - q: "Does the Lightroom PicPeak Plugin work on macOS?"
-    a: "Yes, the plugin works on both Windows and macOS with Adobe Lightroom Classic."
-  - q: "What API token permissions does the plugin need?"
-    a: "A PicPeak API token with write and admin scopes. The write scope uploads photos, and admin is needed to create and manage events."
-  - q: "Can I create a PicPeak event without leaving Lightroom?"
-    a: "Yes. When exporting or setting up a publish collection you can create a new event inline with name, type, date, customer info, password protection, expiry, guest feedback and color theme."
-  - q: "Is the Lightroom PicPeak Plugin free?"
-    a: "Yes, it is free and open source under the MIT license. Get it at github.com/PicPeak/plugin-lightroom."
+    a: "Yes. The plugin supports Lightroom Classic on macOS and Windows."
+  - q: "How do I sign in?"
+    a: "Open PicPeak Overview under Library → Plug-in Extras, choose Config and sign in to your server. Your account needs permission to create API tokens. For SSO or reCAPTCHA, use Advanced and paste a token with the admin scope."
+  - q: "Where does the current plugin store credentials?"
+    a: "The password is exchanged once for a token and not retained. The token is stored in the operating system keychain."
+  - q: "Can I import client selections?"
+    a: "Yes, on a server with GET /api/v1/events/:id/photos. PicPeak Importer matches proofs to local RAW files and applies ratings and colour labels according to your conflict policy."
 ---
 
-If you deliver client galleries and run a self-hosted [PicPeak](https://github.com/PicPeak/picpeak) server, this is the quickest path from a finished edit in Lightroom Classic to a live gallery your client can open. The [Lightroom PicPeak Plugin]({{ '/lrc-picpeak/' | relative_url }}) is free and open source and works on both Windows and macOS.
+The **[Lightroom PicPeak Plugin]({{ '/lrc-picpeak/' | relative_url }})** takes photographs from Lightroom Classic to a self-hosted client gallery, then brings client selections back for editing. I wrote its initial implementation; this guide reflects the current workflow in the [PicPeak repository](https://github.com/PicPeak/plugin-lightroom).
+
+**Updated September 2026:** connection now uses PicPeak Overview and an operating-system keychain token. The workflow also includes importing client ratings and returning finished edits to their proofs.
 
 ## What you'll need
 
-- **Adobe Lightroom Classic** (Windows or macOS)
-- A **running PicPeak server** (v1 API) — PicPeak is a self-hosted, open-source platform for time-limited, password-protected client galleries
-- A **PicPeak API token** with `write` + `admin` scopes
+- Lightroom Classic on Windows or macOS.
+- A PicPeak server with the v1 API enabled.
+- An account allowed to create API tokens.
+- Local RAW files if you want to import proofing selections.
 
-## 1. Download the plugin
+Importing selections needs a server that supports `GET /api/v1/events/:id/photos`. Older servers can support exporting and publishing without supporting the importer.
 
-Grab the plugin from GitHub:
+## 1. Download and install
 
-> **[Download from GitHub](https://github.com/PicPeak/plugin-lightroom)**
+[Download or clone the current plugin](https://github.com/PicPeak/plugin-lightroom) into a permanent folder. Open **File → Plug-in Manager → Add** in Lightroom Classic and choose `picpeak-plugin.lrplugin`.
 
-Download or clone the repository and unzip it somewhere permanent — for example your Documents folder. Don't run it from a temporary or Downloads folder you'll later clear out, or Lightroom will lose the plugin.
+The plugin runs from source, with no build step. If you update its files, use **Reload Plug-in** in the Plug-in Manager.
 
-## 2. Add it in Lightroom Classic
+## 2. Connect to PicPeak
 
-1. Open Lightroom Classic.
-2. Go to **File → Plug-in Manager**.
-3. Click **Add**, browse to the `picpeak-plugin.lrplugin/` directory, and select it.
-4. Click **Done**.
+Open **Library → Plug-in Extras → PicPeak Overview**, then choose **Config**. Enter your server URL and click **Sign in…**.
 
-The plugin now appears in the **Export** dialog and in the **Publish Services** panel.
+The plugin exchanges your password for an API token, stores the token in the operating system keychain, and does not retain the password. Tokens can be revoked in PicPeak's **Settings → API Tokens**.
 
-## 3. Get a PicPeak API token
+For SSO or reCAPTCHA setups, use **Advanced** and paste a manually created token with the required `admin` scope. Consult the [connection documentation](https://github.com/PicPeak/plugin-lightroom#-connect) for your server configuration.
 
-In PicPeak, create an **API token** with `write` and `admin` scopes. The `write` scope lets the plugin upload photos, and `admin` lets it create and manage gallery events on your behalf.
+## 3. Export or publish a gallery
 
-## 4. Connect the plugin to PicPeak
+For a one-time delivery, select photos and use **File → Export → PicPeak Exporter**. Choose your target event, configure the rendered image format and size, and export.
 
-You enter your connection details where you'll actually use the plugin:
+For an ongoing Lightroom collection, use the PicPeak **Publish Service**. Keep track of which event you publish to: that connection matters when you later return edited photos.
 
-1. In the **Export** or **Publish** dialog, find the **PicPeak Server** section.
-2. Enter your server **URL** (e.g. `https://picpeak.example.com`) and your **API token**.
-3. Click **Test Connection** to verify.
+For proofing, upload JPEGs with filenames that can be matched to the original RAWs. Enable colour labels in the event feedback settings if clients should use them.
 
-Credentials are stored in Lightroom preferences and reused across sessions.
+## 4. Import client selections
 
-## 5. Deliver your photos
+After the client has marked their choices, open **PicPeak Importer**. Select the event and the folder holding your RAW files, then choose all files or marked selections.
 
-You have two workflows, depending on whether this is a one-time delivery or an evolving gallery.
+The importer matches local files, applies ratings and colour labels, and collects them in Lightroom. **Fill empty only** is the default conflict policy, so existing values are preserved. Change the policy deliberately if PicPeak's selections should override your own.
 
-### Export a gallery
+On a multi-camera shoot, make filenames unique before uploading. The [matching guide](https://github.com/PicPeak/plugin-lightroom#-multi-camera-shoots) explains camera prefixes and the number-matching fallback. Ambiguous matches are reported rather than guessed.
 
-1. Select photos in Lightroom, then go to **File → Export**.
-2. Choose **PicPeak Exporter** as the export destination.
-3. Under **PicPeak Gallery Event**, pick one of:
-   - **Choose on export** — a picker appears at export time
-   - **Existing event** — select from a dropdown of your events
-   - **Create new event** — fill in event details (name, type, date, customer info, password protection, expiry, guest feedback, color theme) inline
-4. Configure the rest of your export settings (format, size, etc.) and click **Export**.
+## 5. Return the finished edits
 
-### Publish a collection
+Edit the matched RAWs and export to the **same event** they came from. The plugin uses the stored PicPeak photo ID to replace each proof, preserving its ratings, labels, comments and gallery position. Renaming the Lightroom photo does not break that ID-based link.
 
-1. In the **Publish Services** panel, click **Set Up** next to PicPeak Publisher (or right-click to add a collection).
-2. When creating the collection, choose to create a new PicPeak event or bind to an existing one.
-3. Drag photos into the collection and click **Publish**.
-
-With a publish collection, re-uploads are skipped for photos that were already published, so re-publishing only sends what's new. After each upload the plugin writes `picpeakPhotoId` and `picpeakEventId` back to the photo, so Lightroom always knows what already lives on the server.
-
-## A note on deletes and renames
-
-The PicPeak v1 API does not support deleting or renaming events or photos. If you try, the plugin warns you and marks the photos as handled in Lightroom without changing anything on the server. Plan your event names up front, and manage removals from the PicPeak admin interface.
+If you export to a different event, the render becomes a new photo there.
 
 ## Troubleshooting
 
-- **Plugin won't load / disappears:** make sure the folder lives in a permanent location and re-add it in the Plug-in Manager.
-- **Connection fails:** double-check the server URL (including `https://`) and that your API token has both the `write` and `admin` scopes. Use **Test Connection** to confirm.
-- Still stuck? [Open an issue](https://github.com/PicPeak/plugin-lightroom/issues) on GitHub.
+Enable logging in **Plug-in Manager → PicPeak → Logging**, repeat the failed action, and use **Show log file**. For an import problem, check filename matching, the selected RAW folder, the server endpoint and your conflict policy.
 
-That's the whole setup. If you also back up to Immich, see the companion [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}).
+Use the [current round-trip guide](https://docs.picpeak.app/guides/lightroom-roundtrip) for more detail or [open an issue](https://github.com/PicPeak/plugin-lightroom/issues).
+
+For a self-hosted personal photo library alongside client galleries, see the [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}).
 
 ## Frequently asked questions
 
-**What is PicPeak?**
+{% for item in page.faq %}
+### {{ item.q }}
 
-[PicPeak](https://github.com/PicPeak/picpeak) is an open-source, self-hosted photo-sharing platform for delivering **time-limited, password-protected** client galleries while keeping your data on your own server. The [Lightroom PicPeak Plugin]({{ '/lrc-picpeak/' | relative_url }}) uploads photos from Lightroom Classic straight into it.
-
-**Does the plugin work on macOS?**
-
-Yes, the [Lightroom PicPeak Plugin]({{ '/lrc-picpeak/' | relative_url }}) works on both **Windows and macOS** with Adobe Lightroom Classic.
-
-**What API token permissions does the plugin need?**
-
-A PicPeak API token with `write` and `admin` scopes — `write` uploads photos, and `admin` is needed to create and manage events.
-
-**Can I create a PicPeak event without leaving Lightroom?**
-
-Yes. When exporting or setting up a publish collection you can create a new event inline, with name, type, date, customer info, password protection, expiry, guest feedback and color theme.
-
-**Is the Lightroom PicPeak Plugin free?**
-
-Yes — it is free and open source under the MIT license. Get it at [github.com/PicPeak/plugin-lightroom](https://github.com/PicPeak/plugin-lightroom).
+{{ item.a }}
+{% endfor %}

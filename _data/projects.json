@@ -1,0 +1,51 @@
+{
+  "moodswings": {
+    "name": "MoodSwings — Die Stadt der Flummis",
+    "type": [
+      "VideoGame",
+      "SoftwareApplication"
+    ],
+    "category": "GameApplication",
+    "repository": "https://github.com/bmachek/MoodSwings",
+    "license": "https://github.com/bmachek/MoodSwings/blob/main/LICENSE"
+  },
+  "LrGeniusAI": {
+    "name": "LrGeniusAI",
+    "os": "Windows, macOS",
+    "category": "MultimediaApplication",
+    "repository": "https://github.com/LrGenius/LrGeniusAI",
+    "download": "https://github.com/LrGenius/LrGeniusAI/releases",
+    "website": "https://lrgenius.com",
+    "license": "https://github.com/LrGenius/LrGeniusAI/blob/main/LICENSE"
+  },
+  "cidp-buddy": {
+    "name": "CIDP Buddy",
+    "os": "Android, iOS",
+    "category": "HealthApplication",
+    "repository": "https://github.com/bmachek/CIDPbuddy",
+    "download": "https://github.com/bmachek/CIDPbuddy/releases",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html"
+  },
+  "lrc-immich-plugin": {
+    "name": "Lightroom Immich Plugin (lrc-immich-plugin)",
+    "os": "Windows, macOS",
+    "category": "MultimediaApplication",
+    "repository": "https://github.com/bmachek/lrc-immich-plugin",
+    "download": "https://github.com/bmachek/lrc-immich-plugin/releases/latest/",
+    "license": "https://github.com/bmachek/lrc-immich-plugin/blob/main/LICENSE"
+  },
+  "social-mcp": {
+    "name": "social-mcp",
+    "os": "Linux, macOS, Windows (Docker)",
+    "category": "DeveloperApplication",
+    "repository": "https://github.com/bmachek/social-mcp",
+    "download": "https://github.com/bmachek/social-mcp"
+  },
+  "lrc-picpeak": {
+    "name": "Lightroom PicPeak Plugin (lrc-picpeak)",
+    "os": "Windows, macOS",
+    "category": "MultimediaApplication",
+    "repository": "https://github.com/PicPeak/plugin-lightroom",
+    "download": "https://github.com/PicPeak/plugin-lightroom"
+  }
+}

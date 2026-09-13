@@ -28,7 +28,10 @@ faq:
     a: "Yes. The plugin connects to any Immich instance via its URL and API key, including self-hosted servers on a local network or VPN."
 ---
 
-If you edit in **Adobe Lightroom Classic** and self-host your photos with [Immich](https://immich.app/), you can keep a full, automatic backup of your library in Immich without leaving Lightroom. This guide shows you how, using the free, open-source [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}).
+If you edit in **Adobe Lightroom Classic** and self-host your photos with [Immich](https://immich.app/), you can export copies of photos or publish selected collections to Immich without leaving Lightroom. This guide shows you how, using the free, open-source [Lightroom Immich Plugin]({{ '/lrc-immich-plugin/' | relative_url }}).
+
+> A published collection is a synchronised copy, not an independent backup: deletions can be reflected in Immich. Keep separate backups of your original files, Lightroom catalog and Immich data. The plugin does not back up your Lightroom catalog.
+{: .prompt-info }
 
 ## Why back up Lightroom to Immich?
 

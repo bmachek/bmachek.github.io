@@ -12,19 +12,23 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  pull_request:
+    branches: [main, master]
+
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.event.pull_request.number || 'deploy' }}"
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
 
     steps:
       - name: Checkout
@@ -36,6 +40,7 @@ jobs:
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v4
 
@@ -57,11 +62,16 @@ jobs:
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -73,5 +83,23 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Notify IndexNow
+        continue-on-error: true
         run: |
-          curl -s "https://api.indexnow.org/indexnow?url=https%3A%2F%2Fblog.fokuspunk.de%2Fsitemap.xml&key=fe796564a77dd5b1c2571bc44734331c"
+          node --input-type=module <<'NODE'
+          const origin = 'https://blog.fokuspunk.de';
+          const key = 'fe796564a77dd5b1c2571bc44734331c';
+          const sitemap = await fetch(origin + '/sitemap.xml', { signal: AbortSignal.timeout(30000) });
+          if (!sitemap.ok) throw new Error('Sitemap HTTP ' + sitemap.status);
+          const xml = await sitemap.text();
+          const urls = [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]))]
+            .filter(url => url.startsWith(origin + '/') && !url.endsWith('.xml'));
+          if (!urls.length || urls.length > 10000) throw new Error('Unexpected sitemap URL count: ' + urls.length);
+          const result = await fetch('https://api.indexnow.org/indexnow', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify({ host: new URL(origin).host, key, keyLocation: origin + '/' + key + '.txt', urlList: urls }),
+            signal: AbortSignal.timeout(30000)
+          });
+          if (![200, 202].includes(result.status)) throw new Error('IndexNow HTTP ' + result.status);
+          console.log('IndexNow received ' + urls.length + ' page URLs (HTTP ' + result.status + ').');
+          NODE
