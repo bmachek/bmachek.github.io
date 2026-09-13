@@ -1,4 +1,4 @@
-<meta name="msvalidate.01" content="B73AA6CEB04D591CBA759CC101438750" />
+<meta name="robots" content="index, follow, max-image-preview:large">
 
 <!-- Custom design overrides -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,8 +8,69 @@
 
 <!-- Person entity — site author (referenced by SoftwareApplication and BlogPosting pages) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","@id":"https://blog.fokuspunk.de/#person","name":"Bastian Machek","alternateName":"Fokuspunk","url":"https://blog.fokuspunk.de/","sameAs":["https://github.com/bmachek","https://www.instagram.com/fokuspunk/","https://www.fokuspunk.de","https://lrgenius.com"]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ '/#person' | absolute_url }}",
+      "name": "Bastian Machek",
+      "alternateName": ["Fokuspunk", "bmachek"],
+      "url": "{{ '/about-me/' | absolute_url }}",
+      "image": "{{ '/img/avatar.jpg' | absolute_url }}",
+      "description": "Photographer and open-source developer in the Landshut area of Germany. Creator of LrGeniusAI, MoodSwings, the Lightroom Immich Plugin and CIDP Buddy.",
+      "sameAs": ["https://github.com/bmachek", "https://www.instagram.com/fokuspunk/", "https://www.fokuspunk.de"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "Bastian Machek / Fokuspunk",
+      "alternateName": "Fokuspunk",
+      "publisher": {"@id": "{{ '/#person' | absolute_url }}"},
+      "inLanguage": {{ site.lang | jsonify }}
+    },
+    {
+      "@type": {% if page.url == '/about-me/' %}"ProfilePage"{% else %}"WebPage"{% endif %},
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": {{ page.url | absolute_url | jsonify }},
+      "name": {{ page.title | default: site.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "isPartOf": {"@id": "{{ '/#website' | absolute_url }}"},
+      "author": {"@id": "{{ '/#person' | absolute_url }}"},
+      "inLanguage": {{ page.lang | default: site.lang | jsonify }}
+      {% if page.url == '/about-me/' or page.url == '/' %},
+      "mainEntity": {"@id": "{{ '/#person' | absolute_url }}"}
+      {% elsif page.project_schema %},
+      "mainEntity": {"@id": "{{ page.url | absolute_url }}#software"}
+      {% endif %}
+    }
+  ]
+}
 </script>
+
+{% if page.project_schema %}
+{% assign project = site.data.projects[page.project_schema] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ project.type | default: 'SoftwareApplication' | jsonify }},
+  "@id": "{{ page.url | absolute_url }}#software",
+  "name": {{ project.name | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "author": {"@id": "{{ '/#person' | absolute_url }}"},
+  "mainEntityOfPage": {"@id": "{{ page.url | absolute_url }}#webpage"},
+  "subjectOf": {"@type": "SoftwareSourceCode", "codeRepository": {{ project.repository | jsonify }}}
+  {% if project.category %},"applicationCategory": {{ project.category | jsonify }}{% endif %}
+  {% if project.os %},"operatingSystem": {{ project.os | jsonify }}{% endif %}
+  {% if project.license %},"license": {{ project.license | jsonify }}{% endif %}
+  {% if project.download %},"downloadUrl": {{ project.download | jsonify }}{% endif %}
+  {% if project.website %},"sameAs": {{ project.website | jsonify }}{% endif %}
+  {% if page.image %},"image": {{ page.image | absolute_url | jsonify }}{% endif %}
+}
+</script>
+{% endif %}
 
 {% if page.howto %}
 <script type="application/ld+json">

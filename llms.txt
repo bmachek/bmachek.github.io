@@ -1,36 +1,58 @@
 # Bastian Machek / Fokuspunk
 
-> Bastian Machek (known online as Fokuspunk) is a photographer and free software developer based in southern Germany. He builds Lightroom Classic plugins and mobile health apps.
+> Bastian Machek, known online as Fokuspunk and as bmachek on GitHub, is a photographer and open-source developer in the Landshut area of southern Germany. This is his personal blog and project hub.
+
+## Identity and first-party profiles
+
+- [About Bastian Machek / Fokuspunk](https://blog.fokuspunk.de/about-me/): biography, project roles and profile links.
+- [Home and project directory](https://blog.fokuspunk.de/): overview and latest articles.
+- [GitHub: bmachek](https://github.com/bmachek): public developer profile.
+- [Fokuspunk photography](https://www.fokuspunk.de): photography portfolio.
+- [Instagram: fokuspunk](https://www.instagram.com/fokuspunk/): photography profile.
+- [Photography gear](https://blog.fokuspunk.de/gear/): camera, lenses and software.
+- [Contact](https://blog.fokuspunk.de/contact-me/): email and project support.
 
 ## Projects
 
-### LrGeniusAI
-AI-powered Lightroom Classic plugin for automatic photo tagging, image descriptions, and semantic natural-language search. Supports local models (Ollama, LM Studio) and cloud models (Google Gemini, Vertex AI). Uses a Python backend (geniusai-server) with Open-CLIP embeddings.
-- [LrGeniusAI project page](https://blog.fokuspunk.de/LrGeniusAI/)
-- [LrGeniusAI website & download](https://lrgenius.com)
-- [LrGeniusAI on GitHub](https://github.com/LrGenius/LrGeniusAI)
-- [LrGeniusAI help documentation](https://lrgenius.com/help/)
+### MoodSwings — Die Stadt der Flummis
+Open-source comedy sandbox by Bastian Machek, written in Rust with Bevy and Avian 3D. Citizens bounce and pass moods to one another through taunts, cheers and collisions. Landshüpf uses Landshut map data; other city styles are procedural. An experimental multiplayer mode supports shared on-foot exploration on a trusted LAN or private VPN. GPL-3.0-or-later. This is a game, not a mood-tracking or health app. As of September 13, 2026, source builds are available but no packaged GitHub releases have been published.
+- [MoodSwings project page](https://blog.fokuspunk.de/moodswings/)
+- [Source, setup and current development status](https://github.com/bmachek/MoodSwings)
 
-### LR Immich Plugin (lrc-immich-plugin)
-Free, open-source Lightroom Classic plugin to upload, sync, back up, and import photos between Adobe Lightroom Classic and a self-hosted Immich server via the Immich API. Supports export presets, publish services, album sync, duplicate detection, and stacking.
-- [LR Immich Plugin project page](https://blog.fokuspunk.de/lrc-immich-plugin/)
-- [LR Immich Plugin on GitHub](https://github.com/bmachek/lrc-immich-plugin)
-- [Download latest release](https://github.com/bmachek/lrc-immich-plugin/releases/latest/)
+### LrGeniusAI
+Bastian Machek is creator and lead developer. Lightroom Classic plugin for AI tagging, descriptions, semantic search, face recognition and on-device species identification. Beta tools include image culling and Develop recipes learned from saved edits. Lua plugin with a Rust backend, SigLIP2 embeddings and LanceDB. Built-in MLX on macOS and llama.cpp on Windows; also Ollama, LM Studio, Gemini and OpenAI. The former Python backend is obsolete and Vertex AI support was removed in August 2026. AGPL-3.0.
+- [Project page](https://blog.fokuspunk.de/LrGeniusAI/)
+- [Website and help](https://lrgenius.com)
+- [Repository and releases](https://github.com/LrGenius/LrGeniusAI)
+
+### Lightroom Immich Plugin
+Free Lightroom Classic plugin by Bastian Machek to export, publish, sync albums and import photos between Lightroom and an Immich server. A publish service is a synchronised copy, not a replacement for independent backups of originals and the Lightroom catalog.
+- [Project page](https://blog.fokuspunk.de/lrc-immich-plugin/)
+- [Repository](https://github.com/bmachek/lrc-immich-plugin)
+- [Current setup and permissions](https://github.com/bmachek/lrc-immich-plugin/wiki)
+
+### Lightroom PicPeak Plugin
+Initial implementation by Bastian Machek; current project under the PicPeak organisation. Publish client galleries, import proofing ratings and colour labels onto matching RAW files, then replace proofs with finished edits in the same event while retaining feedback.
+- [Project page](https://blog.fokuspunk.de/lrc-picpeak/)
+- [Current repository](https://github.com/PicPeak/plugin-lightroom)
+- [Round-trip documentation](https://docs.picpeak.app/guides/lightroom-roundtrip)
+
+### social-mcp
+Self-hosted MCP server by Bastian Machek for Instagram and Facebook Page publishing, scheduling, analytics and photo-inbox planning through Claude. Meta tokens are configured locally and sent to Meta to authenticate requests; selected media is sent to Meta. Self-hosting does not mean no external data processing.
+- [Project page](https://blog.fokuspunk.de/social-mcp/)
+- [Repository](https://github.com/bmachek/social-mcp)
 
 ### CIDP Buddy
-Free Flutter app for patients with Chronic Inflammatory Demyelinating Polyneuropathy (CIDP). Manages infusion and medication schedules, supply inventory, smart scheduling, and a vitals and symptom diary. Released under GPL v3.
-- [CIDP Buddy project page](https://blog.fokuspunk.de/cidp-buddy/)
-- [CIDP Buddy on GitHub](https://github.com/bmachek/CIDPbuddy)
+App by Bastian Machek, built from his own experience with CIDP, for infusion and medication schedules, supply inventory and a vitals and symptom diary. Flutter targets Android and iOS. GPL v3 license file; consult the repository for current builds and availability.
+- [Project page](https://blog.fokuspunk.de/cidp-buddy/)
+- [Repository](https://github.com/bmachek/CIDPbuddy)
+- [Privacy policy in German](https://blog.fokuspunk.de/cidp-buddy/privacy/)
 
-## How-to guides
+## Guides
 
-- [How to install the Lightroom Immich Plugin (Windows & macOS)](https://blog.fokuspunk.de/posts/install-lightroom-immich-plugin/) — Download, add in Plug-in Manager, create an API key, connect to Immich, upload photos.
-- [How to back up your Lightroom Classic photos to Immich](https://blog.fokuspunk.de/posts/back-up-lightroom-photos-to-immich/) — One-shot export or living publish service for ongoing backup to a self-hosted Immich server.
-- [Sync Lightroom albums to Immich with a Publish Service](https://blog.fokuspunk.de/posts/sync-lightroom-albums-to-immich/) — Keep Lightroom collections and Immich albums in sync automatically.
-
-## About
-
-- [About Bastian Machek](https://blog.fokuspunk.de/about-me/)
-- [Photography gallery — fokuspunk.de](https://www.fokuspunk.de)
-- [GitHub — github.com/bmachek](https://github.com/bmachek)
-- [Instagram — @fokuspunk](https://www.instagram.com/fokuspunk/)
+- [Install the Lightroom Immich Plugin](https://blog.fokuspunk.de/posts/install-lightroom-immich-plugin/)
+- [Export Lightroom photos to Immich for an additional copy](https://blog.fokuspunk.de/posts/back-up-lightroom-photos-to-immich/)
+- [Sync Lightroom collections with Immich albums](https://blog.fokuspunk.de/posts/sync-lightroom-albums-to-immich/)
+- [Publish Lightroom photos to PicPeak](https://blog.fokuspunk.de/posts/publish-lightroom-photos-to-picpeak/)
+- [Manage Instagram and Facebook Pages with social-mcp](https://blog.fokuspunk.de/posts/manage-instagram-facebook-with-claude/)
+- [All articles](https://blog.fokuspunk.de/archives/)

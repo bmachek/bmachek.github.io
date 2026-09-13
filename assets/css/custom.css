@@ -2,6 +2,45 @@
    Terminal / code-style dark theme
    ============================================ */
 
+.project-kicker {
+  color: var(--bm-accent-cyan);
+  font-size: .8rem;
+  letter-spacing: .06em;
+}
+.project-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.project-actions .btn {
+  white-space: normal;
+}
+.project-author {
+  border-top: 1px solid var(--bm-border);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: .85rem;
+}
+#main-wrapper main figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--bm-radius);
+}
+#main-wrapper main figcaption {
+  color: var(--bm-text-dim);
+  font-size: .8rem;
+  margin: .6rem 0 1.5rem;
+}
+@media (max-width: 575px) {
+  #main-wrapper main {
+    padding: 1rem !important;
+    overflow-wrap: anywhere;
+  }
+}
+
 :root {
   --bm-bg: #0d1117;
   --bm-bg-elevated: #161b22;

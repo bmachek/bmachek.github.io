@@ -25,7 +25,7 @@ faq:
   - q: "Can Claude post to Instagram and Facebook?"
     a: "Yes, with social-mcp — a self-hosted MCP server that connects Claude Code or Claude Desktop to the Meta Graph API. Claude gets tools to post photos, carousels and Reels to Instagram and a Facebook Page, plus scheduling and analytics."
   - q: "Where are my Meta access tokens stored?"
-    a: "On your own machine, in a local .env file. social-mcp talks directly to the Meta Graph API, so no third-party service ever handles your token or your media."
+    a: "Your token is configured in a local .env file and sent to Meta to authenticate API requests. Selected media is uploaded or made temporarily available for Meta to fetch."
   - q: "What does the autopilot do?"
     a: "It scans your photo inbox, removes duplicate burst shots by perceptual hash, clusters photos taken close together in time and place into carousels, and proposes a two-week posting schedule. You review it and write captions, then one commit queues everything."
   - q: "Do I need a personal Instagram account?"
@@ -34,7 +34,7 @@ faq:
     a: "Yes. social-mcp is free and self-hosted. The source is on GitHub at github.com/bmachek/social-mcp."
 ---
 
-If you post photography to Instagram and Facebook, most of the work isn't the shooting — it's the tedious pipeline of choosing shots, staging them, writing captions, and remembering to actually publish on a schedule. [social-mcp]({{ '/social-mcp/' | relative_url }}) hands that pipeline to **Claude**. It's a free, self-hosted [MCP server](https://modelcontextprotocol.io) that runs on your own machine and gives Claude Code (or Claude Desktop) the ability to post, schedule and analyse across both platforms — while your Meta token never leaves your server.
+If you post photography to Instagram and Facebook, most of the work isn't the shooting — it's the tedious pipeline of choosing shots, staging them, writing captions, and remembering to actually publish on a schedule. [social-mcp]({{ '/social-mcp/' | relative_url }}) hands that pipeline to **Claude**. It's a free, self-hosted [MCP server](https://modelcontextprotocol.io) that runs on your own machine and gives Claude Code (or Claude Desktop) the ability to post, schedule and analyse across both platforms — with the token configured locally and sent to Meta for authentication.
 
 This guide walks through getting it running end to end.
 
@@ -44,7 +44,6 @@ This guide walks through getting it running end to end.
 - A long-lived **User Access Token** with these scopes:
   - `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`
   - `instagram_basic`, `instagram_content_publish`
-  - `publish_to_groups` (optional — only for Facebook Group cross-posting)
 - An **Instagram Business or Creator account** connected to a **Facebook Page**
 - **Docker Compose** (recommended) or Python 3.8+
 - **Claude Code** or **Claude Desktop** as the MCP client
@@ -53,7 +52,7 @@ This guide walks through getting it running end to end.
 
 In the [Meta for Developers](https://developers.facebook.com/) console, create an app of type **Business** and add **Facebook Login for Business** plus the **Instagram Graph API**. Then generate a **long-lived User Access Token** carrying the scopes listed above.
 
-You'll also need two IDs: your **Facebook Page ID** and your **Instagram User ID**. The full walkthrough — including the token-exchange curl commands — lives in the project's [SETUP guide](https://github.com/bmachek/social-mcp#setup).
+You'll also need two IDs: your **Facebook Page ID** and your **Instagram User ID**. The full walkthrough — including the token-exchange curl commands — lives in the project's [SETUP guide](https://github.com/bmachek/social-mcp/blob/main/SETUP.md).
 
 > Long-lived user tokens last about 60 days. social-mcp ships a `check_token_validity` tool so you (or Claude) can check the expiry and re-exchange before it lapses.
 {: .prompt-tip }
@@ -141,11 +140,11 @@ From a folder of raw exports to a fortnight of scheduled content, reviewed by yo
 
 social-mcp has **no built-in authentication** — it trusts whoever can reach it on the network. Keep it on your LAN, or put a TLS-terminating reverse proxy with a bearer-token check in front if you need to reach it from outside. The README includes a [Caddy](https://caddyserver.com/) example for exposing the file sidecar over Tailscale/Headscale.
 
-Also worth knowing: the Instagram Graph API caps publishing at **50 posts per rolling 24-hour window**. social-mcp checks this before each publish and refuses rather than failing halfway.
+Publishing is subject to Meta's current API quotas and account permissions. The server checks publishing limits before posting; consult the current setup guide and API response if a job is refused.
 
 ## Wrapping up
 
-Once it's running, social-mcp turns social posting into a conversation. You curate the photos; Claude handles the staging, uploading, scheduling and archiving — and the whole thing stays on hardware you control.
+Once it's running, social-mcp turns social posting into a conversation. You curate the photos; Claude handles the staging, uploading, scheduling and archiving. The publishing server runs on hardware you control, while publishing sends selected content to Meta.
 
 Grab it from [github.com/bmachek/social-mcp](https://github.com/bmachek/social-mcp), and see the [project page]({{ '/social-mcp/' | relative_url }}) for the full tool reference.
 
@@ -157,7 +156,7 @@ Yes — with [social-mcp]({{ '/social-mcp/' | relative_url }}). It's a self-host
 
 **Where are my Meta access tokens stored?**
 
-On your own machine, in a local `.env` file. social-mcp talks directly to the Meta Graph API, so no third-party service ever handles your token or your media.
+Your token is configured in a local `.env` file and sent to Meta to authenticate API requests. Selected media is uploaded or made temporarily available for Meta to fetch.
 
 **What does the autopilot do?**
 

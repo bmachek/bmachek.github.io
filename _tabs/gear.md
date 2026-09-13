@@ -2,13 +2,15 @@
 icon: fas fa-camera
 title: Photography Gear
 permalink: /gear/
-order: 7
+order: 8
 description: >-
-  Bastian Machek's photography gear: Canon EOS R5 Mark II, RF lenses, Sigma Art 12-24mm f/4,
-  EF 100mm Macro L, and software including Lightroom Classic, LrGeniusAI, and Immich.
+  Bastian Machek / Fokuspunk's photography setup: Canon EOS R5 Mark II,
+  Canon and Sigma lenses, Lightroom Classic, LrGeniusAI and self-hosted Immich.
 ---
 
 ## Camera
+
+This is the photography setup I use as **[Bastian Machek / Fokuspunk]({{ '/about-me/' | relative_url }})**. My [photography portfolio](https://www.fokuspunk.de) shows the pictures; this page lists the tools behind them.
 
 | | |
 |---|---|

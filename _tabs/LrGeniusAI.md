@@ -4,60 +4,24 @@ title: LrGeniusAI
 permalink: /LrGeniusAI/
 order: 3
 description: >-
-  LrGeniusAI is an AI-powered Lightroom Classic plugin for automatic photo tagging,
-  image descriptions, face recognition, species identification, and semantic
-  natural-language search — with built-in local AI (MLX on macOS, llama.cpp on Windows)
-  or cloud models (Gemini, OpenAI).
+  LrGeniusAI by Bastian Machek: AI tagging, semantic search, faces, species
+  identification and beta editing tools for Lightroom Classic. Local or cloud AI.
+image: /assets/img/lrgenius/lrgenius-logo.png
+project_schema: LrGeniusAI
+faq:
+  - q: "What is LrGeniusAI?"
+    a: "LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It ships built-in local AI (MLX on macOS, llama.cpp on Windows), and also supports Ollama, LM Studio, Google Gemini and ChatGPT/OpenAI."
+  - q: "Does LrGeniusAI work with local AI models?"
+    a: "Yes. LrGeniusAI runs vision models itself — MLX on macOS (Apple silicon) and llama.cpp on Windows — so no external app is required. It also supports Ollama and LM Studio, or cloud models such as Google Gemini and ChatGPT/OpenAI. Switch between local and cloud as needed."
+  - q: "How does the semantic search in LrGeniusAI work?"
+    a: "LrGeniusAI builds a vector index of your photos using SigLIP2 embeddings, stored in a local LanceDB database. Enter a natural-language description (e.g. 'red sports car parked in front of a garage') and the plugin returns a relevance-sorted Collection in Lightroom."
+  - q: "Where can I download LrGeniusAI?"
+    a: "Download LrGeniusAI from lrgenius.com or from the GitHub Releases page at github.com/LrGenius/LrGeniusAI/releases. Documentation and help are at lrgenius.com/help."
 ---
 
-<!-- SoftwareApplication + FAQ structured data for rich results -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "LrGeniusAI",
-      "operatingSystem": "Windows, macOS",
-      "applicationCategory": "MultimediaApplication",
-      "description": "AI-powered Lightroom Classic plugin that uses Large Language Models to tag and describe photos, recognises faces, identifies species on-device, and enables semantic natural-language search across your library.",
-      "url": "https://blog.fokuspunk.de/LrGeniusAI/",
-      "sameAs": "https://lrgenius.com",
-      "downloadUrl": "https://github.com/LrGenius/LrGeniusAI/releases",
-      "softwareHelp": "https://lrgenius.com/help/",
-      "author": { "@type": "Person", "@id": "https://blog.fokuspunk.de/#person", "name": "Bastian Machek" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is LrGeniusAI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It ships built-in local AI (MLX on macOS, llama.cpp on Windows), and also supports Ollama, LM Studio, Google Gemini and ChatGPT/OpenAI." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does LrGeniusAI work with local AI models?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LrGeniusAI runs vision models itself — MLX on macOS (Apple silicon) and llama.cpp on Windows — so no external app is required. It also supports Ollama and LM Studio, or cloud models such as Google Gemini and ChatGPT/OpenAI. Switch between local and cloud as needed." }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the semantic search in LrGeniusAI work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "LrGeniusAI builds a vector index of your photos using SigLIP2 embeddings, stored in a local LanceDB database. Enter a natural-language description (e.g. 'red sports car parked in front of a garage') and the plugin returns a relevance-sorted Collection in Lightroom." }
-        },
-        {
-          "@type": "Question",
-          "name": "Where can I download LrGeniusAI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Download LrGeniusAI from lrgenius.com or from the GitHub Releases page at github.com/LrGenius/LrGeniusAI/releases. Documentation and help are at lrgenius.com/help." }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-## LrGeniusAI
+
+## AI tools for your Lightroom Classic library
 
 ![LrGenius Logo](/assets/img/lrgenius/lrgenius-logo.png){: width="80" .left }
 
@@ -65,7 +29,10 @@ description: >-
 
 [LrGeniusAI](https://lrgenius.com) brings modern Large Language Models (LLMs) into Adobe Lightroom Classic: it analyzes your photos, generates accurate tags and detailed descriptions, and lets you search your library with natural language. You can run local models for maximum privacy or use cloud APIs; the plugin fits into your workflow either way.
 
-### Core features
+## Core features
+
+- **AI Edit & style training (beta)** — Create Develop recipes from your own saved edits, with at least five training examples and per-photo review enabled by default. This workflow interpolates your examples rather than calling a language model.
+- **Image culling (beta)** — Group bursts and near-duplicates, rank frames, and create collections for picks, alternates and reject candidates.
 
 - **AI-powered tagging & describing** — LLMs recognize image content and generate metadata and detailed descriptions.
 - **Semantic free-text search** — Find images by describing what you want (e.g. *"Red sports car parked in front of a garage"*). LrGeniusAI builds a relevance-sorted Collection in Lightroom from your prompt.
@@ -77,7 +44,7 @@ description: >-
 - **Photo context** — Add hints (names, background details) in a dialog or in Lightroom’s metadata panel so the AI can use them.
 - **Custom Rust backend** — A local server (`geniusai-server`) written in Rust for low memory overhead. Import existing catalog metadata before the first AI run.
 
-### Tech stack
+## Tech stack
 
 - **Plugin:** Lua (Lightroom Classic SDK)  
 - **Backend:** Rust — `geniusai-server`, an [axum](https://github.com/tokio-rs/axum) HTTP service that runs locally alongside Lightroom  
@@ -94,26 +61,18 @@ description: >-
 > `geniusai-server` repository is archived. **Google Vertex AI support was removed in August 2026.**
 {: .prompt-info }
 
-### Get it
+## Get it
 
 - **Download:** [GitHub Releases](https://github.com/LrGenius/LrGeniusAI/releases)  
 - **Website & help:** [lrgenius.com](https://lrgenius.com) · [lrgenius.com/help](https://lrgenius.com/help/)  
 - **Source:** [github.com/LrGenius](https://github.com/LrGenius) (LrGeniusAI, LrGeniusTagAI)
 
-### Frequently asked questions
+## Frequently asked questions
 
-**What is LrGeniusAI?**
+{% for item in page.faq %}
+### {{ item.q }}
 
-LrGeniusAI is a Lightroom Classic plugin that uses Large Language Models (LLMs) to automatically tag and describe your photos, and lets you search your library with natural-language prompts. It ships built-in local AI (MLX on macOS, llama.cpp on Windows), and also supports Ollama, LM Studio, Google Gemini and ChatGPT/OpenAI.
+{{ item.a }}
+{% endfor %}
 
-**Does LrGeniusAI work with local AI models?**
-
-Yes. LrGeniusAI runs vision models itself — **MLX** on macOS (Apple silicon) and **llama.cpp** on Windows — so no external app is required for fully local, private processing. It also supports Ollama and LM Studio, or cloud models such as Google Gemini and ChatGPT/OpenAI.
-
-**How does the semantic search work?**
-
-LrGeniusAI builds a vector index of your photos using **SigLIP2** embeddings, stored in a local **LanceDB** database. Enter a natural-language description (e.g. *"red sports car parked in front of a garage"*) and the plugin returns a relevance-sorted Collection in Lightroom Classic.
-
-**Where can I download LrGeniusAI?**
-
-Download from [lrgenius.com](https://lrgenius.com) or the [GitHub Releases page](https://github.com/LrGenius/LrGeniusAI/releases). Documentation and help are at [lrgenius.com/help](https://lrgenius.com/help).
+{% include project-author.html %}

@@ -1,33 +1,44 @@
 ---
 permalink: /robots.txt
+layout: null
+sitemap: false
 ---
 
 User-agent: *
 Disallow: /norobots/
 
-# AI crawlers — explicitly allowed
+# Explicit groups repeat the site's exclusion because crawler-specific groups
+# do not inherit the wildcard group's rules.
 User-agent: GPTBot
 Allow: /
+Disallow: /norobots/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /norobots/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /norobots/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /norobots/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /norobots/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /norobots/
 
 User-agent: CCBot
 Allow: /
+Disallow: /norobots/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /norobots/
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
