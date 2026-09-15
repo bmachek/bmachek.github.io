@@ -594,3 +594,38 @@ footer a:hover {
 .lb-close:hover {
   background: rgba(255, 255, 255, 0.14);
 }
+
+/* ============================================
+   Brand logo
+   ============================================ */
+
+.site-logo {
+  margin: 0 0 1.75rem;
+  line-height: 0;
+}
+
+.site-logo a {
+  display: block;
+  border-bottom: none !important;
+  background: #000;
+  border: 1px solid var(--bm-border);
+  border-radius: var(--bm-radius);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+#main-wrapper main .site-logo a,
+#main-wrapper main .site-logo a:hover {
+  border-bottom: 1px solid var(--bm-border) !important;
+}
+
+#main-wrapper main .site-logo a:hover {
+  border-color: var(--bm-accent) !important;
+}
+
+.site-logo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

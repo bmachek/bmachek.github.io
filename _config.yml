@@ -86,7 +86,7 @@ avatar: img/avatar.jpg
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
 # The author portrait is the fallback; project pages override this with their own image.
-social_preview_image: /img/avatar.jpg
+social_preview_image: /assets/img/brand/fokuspunk-og.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -195,6 +195,7 @@ compress_html:
     envs: [development]
 
 exclude:
+  - img/fokuspunk.png # Logo-Masterdatei, nicht veroeffentlicht
   - "*.gem"
   - "*.gemspec"
   - docs

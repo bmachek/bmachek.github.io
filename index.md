@@ -7,6 +7,10 @@ description: >-
 permalink: /
 ---
 
+<div class="site-logo">
+  <a href="{{ '/' | relative_url }}" aria-label="Fokuspunk — Startseite"><img src="{{ '/assets/img/brand/fokuspunk-logo.webp' | relative_url }}" width="1280" height="583" alt="Fokuspunk — Schriftzug-Logo mit einem Kameraobjektiv als O"></a>
+</div>
+
 <p class="project-kicker">Photography · Open source · Landshut, Germany</p>
 
 ## Cameras, code, and a city with a temper.
